@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <>
       <header>
-        <div className=" text-white">
+        <div className="">
           <button className="text-base  bg-sky-500 p-2 m-2 rounded-full gap-10">
             User
           </button>
@@ -14,43 +14,17 @@ export const Header = () => {
           <button className="text-base  bg-sky-500 p-2 m-2 rounded-full  gap-10">
             Data
           </button>
-        
-            <nav className="space-x-8 text-lg">
-          <NavLink
-            to="/"
-    
-          >
-            Início
-          </NavLink>
-          <NavLink
-            to="/login"
-         
-          >
-            Login
-          </NavLink>
 
-          <NavLink
-            to="/register"
-         
-          >
-            Register
-          </NavLink>
+          <nav className="space-x-8 text-lg">
+            <NavLink to="/">Início</NavLink>
+            <NavLink to="/login">Login</NavLink>
 
-           <NavLink
-            to="/user"
-           
-            
-          >
-            User
-          </NavLink>
+            <NavLink to="/register">Register</NavLink>
 
-           <NavLink
-            to="/history"
-            
-          >
-            History
-          </NavLink>
-        </nav>
+            <NavLink to="/user">User</NavLink>
+
+            <NavLink to="/history">History</NavLink>
+          </nav>
         </div>
       </header>
     </>
