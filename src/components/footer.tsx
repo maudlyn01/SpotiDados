@@ -1,7 +1,9 @@
 export const Footer = () => {
-    return(
-        <footer>
-            
-        </footer>
-    )
-}
+  return (
+    <>
+      <footer>
+        <nav className="text-amber-300 fixed"> home</nav>
+      </footer>
+    </>
+  );
+};
