@@ -1,11 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Routes } from "react-router-dom";
-
 import "./index.css";
+import { Routes } from "./router.tsx";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <Routes />
-  </StrictMode>
-);
+createRoot(document.getElementById("root")!).render(<StrictMode>
+  <Routes />
+</StrictMode>);

@@ -1,5 +1,13 @@
+import { Footer } from "../components/footer"
+import { Header } from "../components/header"
+
 export const Login = () => {
     return(
+
+        <div className="bg-black">
+            <Header />
+            <main>
+              
         <div>
              <div className="input-button ">
                 
@@ -14,6 +22,8 @@ export const Login = () => {
             <div>
             <button className="" type="submit">sig in</button>
             </div>
+        </main>
+            <Footer />
 
         </div>
     )
