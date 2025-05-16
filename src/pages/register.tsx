@@ -6,15 +6,15 @@ export const Register = () => {
     return(
         <div className="bg-black">
             <Header />
-            <h2>Create new acount</h2>
-            < input type="name" placeholder="name" />
-            <input type="surname" placeholder="surname"/>
-            <input type="username" placeholder="username"/>
-            <input type="password" placeholder="Password"/>
+            <h2 style={{position:"relative", top:"189px", left:"150px"}}>Create new acount</h2>
+            < input type="name" placeholder="name" style={{position:"relative", top:"1px", left:"350px", backgroundColor:"white", borderRadius:"15px"}} />
+            <input type="surname" placeholder="surname" style={{position:"relative", top:"50px", left:"170px" , backgroundColor:"white", borderRadius:"15px"}} />
+            <input type="username" placeholder="username" style={{position:"relative", top:"112px", left:"px", backgroundColor:"brown", borderRadius:"15px" }}/>
+            <input type="password" placeholder="Password" style={{position:"relative", top:"160px", right:"180px", backgroundColor:"brown", borderRadius:"15px"}}/>
             <input type="confirm password" placeholder="password"/>
             <img src="" alt="" />
 
-            <button style={{width:"20px", height:"7px", borderRadius:"6px" }}>Registar</button>
+            <button style={{ }}>Registar</button>
             <p></p>
             <Footer />
         </div>
