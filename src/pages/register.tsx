@@ -1,8 +1,11 @@
-import { Placeholder } from "phosphor-react"
+
+import { Footer } from "../components/footer"
+import { Header } from "../components/header"
 
 export const Register = () => {
     return(
-        <div>
+        <div className="bg-black">
+            <Header />
             <h2>Create new acount</h2>
             < input type="name" placeholder="name" />
             <input type="surname" placeholder="surname"/>
@@ -13,7 +16,7 @@ export const Register = () => {
 
             <button style={{width:"20px", height:"7px", borderRadius:"6px" }}>Registar</button>
             <p></p>
-
+            <Footer />
         </div>
     )
 }
