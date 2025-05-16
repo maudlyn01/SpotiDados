@@ -2,7 +2,7 @@ export const Header = () => {
   return (
     <>
       <header>
-        <div className="">
+        <div className="text-white">
           <button className="text-base  bg-sky-500 p-2 m-2 rounded-full gap-10">
             User
           </button>
