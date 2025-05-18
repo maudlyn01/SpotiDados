@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
 
+<<<<<<< HEAD
 const stylebutton = "text-base  bg-sky-500 p-2 m-2 rounded-full gap-10 ";
+=======
+const stylebutton = "text-white   p-2 m-2   gap-10]";
+>>>>>>> dev-geniamaria
 export const Header = () => {
   return (
     <>
