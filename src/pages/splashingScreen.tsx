@@ -16,7 +16,6 @@ export const SplashingScreen = () => {
     <>
 
       <div className="flex items-center justify-center h-screen bg-black relative">
-        {/* Barra de status simulada */}
         <div className="absolute top-2 left-4 text-white text-sm">
           <CellSignalFull size={32} />
         </div>
