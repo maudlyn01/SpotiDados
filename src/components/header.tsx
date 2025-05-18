@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const stylebutton = "text-base  bg-sky-500 p-2 m-2 rounded-full  gap-10]";
+const stylebutton = "text-base  bg-sky-500 p-2 m-2 rounded-full gap-10 ";
 export const Header = () => {
   return (
     <>

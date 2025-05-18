@@ -1,9 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {History,Login,Register, Home} from "./pages";
+import {History,Login,Register, Home, SplashingScreen} from "./pages";
 
 const router = createBrowserRouter([
     {
-        path:"/",
+    path: "/",
+    element: <SplashingScreen />,
+  },
+    {
+        path:"/home",
         element:<Home/>,
     },
     {

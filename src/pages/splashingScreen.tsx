@@ -1,8 +1,33 @@
+import { CellSignalFull } from "@phosphor-icons/react/dist/icons/CellSignalFull";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 export const SplashingScreen = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+     }, 3000); 
+
+    return () => clearTimeout(timer); 
+  }, [navigate]);
   return (
     <>
-      <div className="bg-black min-h-screen mflex flex-col p-5 items-center">
-        <img src="/img/logo.png" alt="" width={384} height={384} />
+
+      <div className="flex items-center justify-center h-screen bg-black relative">
+        {/* Barra de status simulada */}
+        <div className="absolute top-2 left-4 text-white text-sm">
+          <CellSignalFull size={32} />
+        </div>
+        <div className="absolute top-2 right-4 text-white text-sm">
+          {`${new Date().getHours()}:${String(new Date().getMinutes()).padStart(2, "0")}`}
+        </div>
+
+        {/* Logo*/}
+        <div className="flex flex-col items-center">
+          <img src="/logo.png" alt="spotidados logo" className="w-64 h-auto" />
+        </div>
       </div>
     </>
   );
