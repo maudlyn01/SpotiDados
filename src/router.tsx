@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {History,Login,Register, Home, SplashingScreen} from "./pages";
+import {Home,History,Homelogin,Login,Register, SplashingScreen} from "./pages";
 
 const router = createBrowserRouter([
     {
     path: "/",
-    element: <SplashingScreen />,
+    element: <SplashingScreen/>,
   },
     {
         path:"/home",
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
     {
         path:"/register",
         element:<Register/>,
+    },
+    {
+        path:"/homelogin",
+        element:<Homelogin/>,
     },
     {
         path:"/history",
