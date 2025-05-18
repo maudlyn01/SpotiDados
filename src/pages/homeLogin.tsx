@@ -1,30 +1,77 @@
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
+import React, { useState } from "react";
+
+import img from "/img/Anderson-Mario.jpg";
+import img1 from "/img/edmazia.jpg";
+import img2 from "/img/anselmo.png";
+import img3 from "/img/Rihanna.jpg";
 
 export const HomeLogin = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [img, img1, img2, img3];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1) % images.length);
+  };
   return (
     <>
-      <div className="bg-black min-h-screen">
+      <div className="bg-black min-h-screen min-w-screen">
         <Header />
-        <main className="  flex-1">
-            <section>
-                <img/>
-                <img/>
-                <img/>
-                <img/>
-            </section>
-            <section>
-                <img/>
-                <img/>
-                <img/>
-                <img/>
-            </section>
-            <section className="">
-                <p><img/></p>
-                <p><img/></p>
-                <p><img/></p>
-                <p><img/></p>
-            </section>
+        <main>
+          <p className="text-white p-5"> Artitas Internacionais</p>
+          <div className=" items-center p-5">
+            <img
+              src={images[currentIndex]}
+              alt={`Imagem ${currentIndex + 1}`}
+              width={150}
+              height={150}
+            />
+            <button
+              onClick={prevSlide}
+              className="text-white bg-blue-500 rounder"
+            >
+              Anterior
+            </button>
+            <button onClick={nextSlide} className="text-white">
+              Próximo
+            </button>
+          </div>
+          <section>
+            <p className="text-white p-5"> Artitas Nacionais</p>
+            <div className=" items-center p-5">
+              <img
+                src={images[currentIndex]}
+                alt={`Imagem ${currentIndex + 1}`}
+                width={150}
+                height={150}
+              />
+              <button onClick={prevSlide} className="text-white">
+                Anterior
+              </button>
+              <button onClick={nextSlide} className="text-white">
+                Próximo
+              </button>
+            </div>
+          </section>
+          <section className="">
+            <p>
+              <img />
+            </p>
+            <p>
+              <img />
+            </p>
+            <p>
+              <img />
+            </p>
+            <p>
+              <img />
+            </p>
+          </section>
         </main>
         <Footer />
       </div>
