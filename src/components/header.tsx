@@ -5,12 +5,12 @@ export const Header = () => {
   return (
     <>
       <header>
-        <div className="">
+        <div className="p-10" >
           <button className={stylebutton}>  User </button>
           <button className={stylebutton}>  All  </button>
           <button className={stylebutton}>  Data </button>
 
-          <nav className="space-x-8 text-lg">
+          <nav className="space-x-8 text-lg p-5">
             <NavLink to="/">Início</NavLink>
             <NavLink to="/login">Login</NavLink>
 

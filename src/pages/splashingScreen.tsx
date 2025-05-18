@@ -1,6 +1,6 @@
-import { CellSignalFull } from "@phosphor-icons/react/dist/icons/CellSignalFull";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { StatusBar } from "../components/networkTimeBar";
 
 export const SplashingScreen = () => {
   const navigate = useNavigate();
@@ -8,20 +8,14 @@ export const SplashingScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/");
-     }, 3000); 
+    }, 3000);
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, [navigate]);
   return (
     <>
-
       <div className="flex items-center justify-center h-screen bg-black relative">
-        <div className="absolute top-2 left-4 text-white text-sm">
-          <CellSignalFull size={32} />
-        </div>
-        <div className="absolute top-2 right-4 text-white text-sm">
-          {`${new Date().getHours()}:${String(new Date().getMinutes()).padStart(2, "0")}`}
-        </div>
+        <StatusBar />
 
         {/* Logo*/}
         <div className="flex flex-col items-center">
