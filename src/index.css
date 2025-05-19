@@ -76,7 +76,7 @@
   color: var(--color-text);
   width: var(--card-width);
   height: var(--card-height);
-  padding: 1rem;
+  padding: 2rem;
   border-radius: var(--radius-spotidados);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
