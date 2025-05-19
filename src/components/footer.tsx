@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { House, Book, MagnifyingGlass } from "phosphor-react";
 const stylebutton =
-  "text-white p-2   gap-10] flex justify-around items-baseline-last mb-0 absolute inset-x-0 bootom-0 h-20";
+  "text-white p-2 gap-10] flex justify-around items-baseline-last mb-0 absolute inset-x-0 bootom-0 h-20";
 export const Footer = () => {
   return (
     <>

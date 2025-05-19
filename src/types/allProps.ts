@@ -1,16 +1,3 @@
-export interface HeaderProps {
-
-}
-
-export interface LoginProps {
-
-
-}
-
-export interface RegisterProps {
-
-}
-
 export interface UserProps {
   id: string;
   name: string;
@@ -19,8 +6,4 @@ export interface UserProps {
 export interface HomeProps {
   user: UserProps;
   onLogout: () => void;
-}
-
-export interface FooterProps {
-
 }

@@ -1,11 +1,9 @@
-import { StatusBar } from "../components/networkTimeBar";
-
 const styleInput = "bg-white p-2 w-70 relative  rounded-[15px]";
 export const Register = () => {
   return (
     <>
       <div className="bg-black min-h-screen">
-        <StatusBar />
+        
         <main>
           <img src="/img/logo.png" alt="" width={350} height={350} className="p-4 mx-auto" />
           <p>Create </p>
