@@ -50,6 +50,23 @@
   transition: background-color 0.3s ease;
 }
 
+.btnNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-size: var(--font-paragraph);
+  width: 3rem;
+  height: var(--btn-height);
+  border-radius: var(--radius-spotidados);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .btn:hover {
   background-color: var(--color-hover);
 }
@@ -71,12 +88,18 @@
   color: var(--color-text);
 }
 
+.icon:hover {
+  background-color: var(--color-hover);
+}
+
 .card {
   background-color: var(--color-surface);
   color: var(--color-text);
   width: var(--card-width);
   height: var(--card-height);
-  padding: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-top: 1rem;
   border-radius: var(--radius-spotidados);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }

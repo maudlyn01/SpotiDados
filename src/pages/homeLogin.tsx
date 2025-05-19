@@ -1,5 +1,6 @@
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
+import { ArrowRight, ArrowLeft } from "phosphor-react";
 import { Users } from "../data/userdata";
 import { NavLink } from "react-router-dom";
 import { User } from "phosphor-react";
@@ -56,42 +57,45 @@ export const Homelogin = () => {
       <div className="bg-black min-h-screen ">
         <Header />
         <main>
-          <section className="m-10">
+          <section className="m-5">
             <p className="text-white "> International Artists</p>
 
             <img
               src={images[currentIndex]}
               alt={`Imagem ${currentIndex + 1}`}
             />
-            <div className="flex">
-              <button onClick={prevSlide} className="btn ">
-                Anterior
+            <div className="flex justify-between">
+              <button onClick={prevSlide}>
+                <ArrowLeft className="btnNav" />
               </button>
-              <button onClick={nextSlide} className="btn">
-                Próximo
+              <button onClick={nextSlide}>
+                <ArrowRight className="btnNav" />
               </button>
             </div>
           </section>
-          <section className="m-8">
+          <section className="m-5 ">
             <p className="text-white "> National artists</p>
             <div>
               <img
                 src={image[currentsIndex]}
                 alt={`Imagem ${currentsIndex + 1}`}
               />
-              <div className="flex">
-                <button onClick={prevSlides} className="btn">
-                  Anterior
+              <div className="flex justify-between">
+                <button onClick={prevSlides}>
+                  <ArrowLeft className="btnNav" />
                 </button>
-                <button onClick={nextSlides} className="btn">
-                  Próximo
+                <button onClick={nextSlides}>
+                  <ArrowRight className="btnNav" />
                 </button>
               </div>
             </div>
           </section>
-          <section className="card">
-            <ul>{listeUsers}</ul>
-          </section>
+          <div className="mx-1">
+            <p className="text-white m-2"> Users</p>
+            <section className="card">
+              <ul>{listeUsers}</ul>
+            </section>
+          </div>
         </main>
         <Footer />
       </div>
