@@ -13,12 +13,8 @@ import img6 from "/img/perola.jpg";
 import img7 from "/img/ubakka.jpg";
 export const Home = () => {
   const navigate = useNavigate();
-
-  //section national
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const images = [img, img1, img6, img2, img3];
-
+  const images = [img, img1, img6, img2, img3, img4, img5, img6, img7];
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -28,20 +24,6 @@ export const Home = () => {
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
-  //section international
-  const [currentsIndex, setCurrentsIndex] = useState(0);
-  const image = [img4, img5, img7];
-
-  const nextSlides = () => {
-    setCurrentsIndex((prevIndex) => (prevIndex + 1) % image.length);
-  };
-
-  const prevSlides = () => {
-    setCurrentsIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % image.length
-    );
-  };
-
   return (
     <div className="bg-black min-h-screen p-5 items-center grid grid-cols-1">
       <Header />
@@ -68,23 +50,13 @@ export const Home = () => {
           </div>
         </section>
         <br />
-        <section className="m-5 ">
-          <p className="text-white "> National artists</p>
-          <div>
-            <img
-              src={image[currentsIndex]}
-              alt={`Imagem ${currentsIndex + 1}`}
-            />
-            <div className="flex justify-between">
-              <button onClick={prevSlides}>
-                <ArrowLeft className="btnNav" />
-              </button>
-              <button onClick={nextSlides}>
-                <ArrowRight className="btnNav" />
-              </button>
-            </div>
-          </div>
-        </section>
+        <br />
+
+        <h4 className="text-white">National Artists</h4>
+
+        <div className="card">
+          <img src="/img/ubakka.jpg" alt="" className="card " />
+        </div>
       </main>
       <Footer />
     </div>

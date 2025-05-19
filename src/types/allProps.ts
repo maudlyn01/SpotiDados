@@ -1,10 +1,10 @@
 export interface UserProps {
-  id: number;
+  id: string;
   name: string;
   email: string;
 }
 export interface UserProp {
-  id: number;
+  id: string;
   name: string;
 }
 export interface HomeProps {
