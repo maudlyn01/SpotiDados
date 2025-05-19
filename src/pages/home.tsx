@@ -8,6 +8,7 @@ export const Home = () => {
   return (
     <div className="bg-black min-h-screen p-5 items-center grid grid-cols-1">
       <Header />
+      
       <main className="flex-1 p-4 ">
 
         <div className="flex justify-end">
