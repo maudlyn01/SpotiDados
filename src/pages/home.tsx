@@ -5,16 +5,18 @@ import { Footer } from "../components/footer";
 
 export const Home = () => {
   const navigate = useNavigate();
-
+  
   return (
-    <div className="bg-black p-16 min-h-screen flex">
-
+    <div className="bg-black p-16 min-h-screen">
       <Header />
-      <main className="p-9 flex justify-end gap 4">
-        <button className="btn" onClick={() => navigate("/login")}>login</button> <button className="btn" onClick={() => navigate("/register")}>sing-in</button>
-        
+
+      <main className="flex flex-1">
+        <button className="btn" onClick={() => navigate("/login")}>login</button>
+        <button className="btn" onClick={() => navigate("/register")}>sing-in</button>
+        <img src="/img/logo1.png" alt="" />
       </main>
       <Footer />
     </div>
+    
   );
 };

@@ -7,7 +7,6 @@ import img2 from "/img/anselmo.png";
 import img3 from "/img/Rihanna.jpg";
 import img4 from "/img/neyma.jpg";
 import img5 from "/img/levy.jpg";
-import img6 from "/img/perola.png";
 import img7 from "/img/ubakka.jpg";
 export const Homelogin = () => {
   //section national
@@ -25,7 +24,7 @@ export const Homelogin = () => {
   };
   //section international
   const [currentsIndex, setCurrentsIndex] = useState(0);
-  const image = [img4, img5, img6, img7];
+  const image = [img4, img5, img7];
 
   const nextSlides = () => {
     setCurrentsIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -55,7 +54,7 @@ export const Homelogin = () => {
             >
               Anterior
             </button>
-            <button onClick={nextSlide} className="text-white">
+            <button onClick={nextSlide} className="btn">
               Próximo
             </button>
           </div>
@@ -68,10 +67,10 @@ export const Homelogin = () => {
                 width={150}
                 height={150}
               />
-              <button onClick={prevSlides} className="text-white">
+              <button onClick={prevSlides} className="btn">
                 Anterior
               </button>
-              <button onClick={nextSlides} className="text-white">
+              <button onClick={nextSlides} className="btn">
                 Próximo
               </button>
             </div>

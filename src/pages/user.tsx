@@ -1,6 +1,5 @@
 import { Footer } from "../components/footer"
 import { Header } from "../components/header"
-import { StatusBar } from "../components/networkTimeBar"
 import { type UserProps } from "../types/allProps"
 
 
@@ -8,7 +7,7 @@ export const User = (user: UserProps) => {
 
     return (
         <div className="relative min-h-screen bg-black text-white">
-            <StatusBar />
+            
             <div className="bg-black">
                 <Header />
                 <main className="flex-1 p-8">

@@ -1,14 +1,13 @@
 import { House, Book, MagnifyingGlass } from "phosphor-react";
-const stylebutton = "text-white p-2   gap-10] flex justify-around items-baseline-last mb-0 absolute inset-x-0 bootom-0 h-20";
 export const Footer = () => {
   return (
     <>
-      <footer>
-        <nav className=" text-white ">
-          <div className={stylebutton}>
-            <Book size={32} />
-            <House size={32} weight="fill" />
-            <MagnifyingGlass size={32} />
+      <footer className="primary">
+        <nav>
+          <div className="flex justify-between align-bottom">
+            <Book className="icon"/>
+            <House weight="fill" className="icon" />
+            <MagnifyingGlass className="icon" />
           </div>
         </nav>
       </footer>
