@@ -1,6 +1,6 @@
-import { Heart } from "@phosphor-icons/react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
+import { Heart } from "@phosphor-icons/react";
 
 export const History = () => {
   const nationalArtists = [
@@ -22,7 +22,7 @@ export const History = () => {
       <main className="flex-1 p-4">
         <h2 className="text-white text-xl mb-4 ">History</h2>
         <h2 className="text-white text-xl mb-4">National Artists</h2>
-        <ol className="text-white space-y-4">
+        <ol className="text-white space-y-4 ">
           {nationalArtists.map((artist) => (
             <li key={artist.name} className="flex items-center gap-4">
               <img

@@ -17,7 +17,8 @@ import img7 from "/img/ubakka.jpg";
 export const Homelogin = () => {
   //section national
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [img, img1, img2, img3];
+
+  const images = [img, img1, img6, img2, img3];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -30,7 +31,7 @@ export const Homelogin = () => {
   };
   //section international
   const [currentsIndex, setCurrentsIndex] = useState(0);
-  const image = [img4, img5, img6, img7];
+  const image = [img4, img5, img7];
 
   const nextSlides = () => {
     setCurrentsIndex((prevIndex) => (prevIndex + 1) % image.length);
@@ -47,19 +48,18 @@ export const Homelogin = () => {
   const listeUsers = Users.map((person) => (
     <NavLink to="/history">
       <li className="flex flex-colunm">
-        <User className="icon" /> <b>{person.name}</b>
+        <User className="iconUser" /> <b>{person.name}</b>
       </li>
     </NavLink>
   ));
 
   return (
     <>
-      <div className="bg-black min-h-screen ">
+      <div className="bg-black min-h-screen p-5 min-w-screen">
         <Header />
         <main>
-          <section className="m-5">
-            <p className="text-white "> International Artists</p>
-
+          <section>
+            <p className="text-white p-5"> National Artists</p>
             <img
               src={images[currentIndex]}
               alt={`Imagem ${currentIndex + 1}`}

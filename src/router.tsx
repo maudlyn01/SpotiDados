@@ -5,7 +5,6 @@ import {
   Login,
   Register,
   Home,
-  User,
   SplashingScreen,
 } from "./pages";
 
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
-  },
-  {
-    path: "/user",
-    element: <User id={""} name={""} email={""} />,
   },
   {
     path: "/history",
