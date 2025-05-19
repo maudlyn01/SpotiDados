@@ -1,6 +1,6 @@
+import { Heart } from "@phosphor-icons/react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-import { Heart } from "@phosphor-icons/react";
 
 export const History = () => {
   const nationalArtists = [
