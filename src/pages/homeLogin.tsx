@@ -1,21 +1,40 @@
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
-import React, { useState } from "react";
+import { useState } from "react";
 import img from "/img/Anderson-Mario.jpg";
 import img1 from "/img/edmazia.jpg";
 import img2 from "/img/anselmo.png";
 import img3 from "/img/Rihanna.jpg";
-
+import img4 from "/img/neyma.jpg";
+import img5 from "/img/levy.jpg";
+import img6 from "/img/perola.png";
+import img7 from "/img/ubakka.jpg";
 export const Homelogin = () => {
- const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [img,img1, img2, img3];
+  //section national
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [img, img1, img2, img3];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+  //section international
+  const [currentsIndex, setCurrentsIndex] = useState(0);
+  const image = [img4, img5, img6, img7];
+
+  const nextSlides = () => {
+    setCurrentsIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlides = () => {
+    setCurrentsIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
   return (
     <>
@@ -44,15 +63,15 @@ export const Homelogin = () => {
             <p className="text-white p-5"> Artitas Nacionais</p>
             <div className=" items-center p-5">
               <img
-                src={images[currentIndex]}
-                alt={`Imagem ${currentIndex + 1}`}
+                src={image[currentsIndex]}
+                alt={`Imagem ${currentsIndex + 1}`}
                 width={150}
                 height={150}
               />
-              <button onClick={prevSlide} className="text-white">
+              <button onClick={prevSlides} className="text-white">
                 Anterior
               </button>
-              <button onClick={nextSlide} className="text-white">
+              <button onClick={nextSlides} className="text-white">
                 Próximo
               </button>
             </div>
