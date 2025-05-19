@@ -9,14 +9,13 @@ export const Footer = () => {
         <nav className=" text-white ">
           <div className={stylebutton}>
             <NavLink to="/" className="btn">
-              <Book size={32} />
+              <Book className="icon" />
             </NavLink>
-
             <NavLink to="/home" className="btn">
-              <House size={32} weight="fill" />
+              <House className="icon" weight="fill" />
             </NavLink>
             <NavLink to="/" className="btn">
-              <MagnifyingGlass size={32} />
+              <MagnifyingGlass className="icon" />
             </NavLink>
           </div>
         </nav>
