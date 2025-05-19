@@ -1,18 +1,35 @@
 import { useNavigate } from "react-router-dom";
-
-import { Header } from "../components/header";
 import { Footer } from "../components/footer";
+import { Header } from "../components/header";
 
 export const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-black p-16 min-h-screen flex">
-
+    <div className="bg-black min-h-screen p-5 items-center grid grid-cols-1">
       <Header />
-      <main className="p-9 flex justify-end gap 4">
-        <button className="btn" onClick={() => navigate("/login")}>login</button> <button className="btn" onClick={() => navigate("/register")}>sing-in</button>
-        
+      <main className="p-2 flex-1">
+        <div className="flex justify-end">
+          <button className="btn" onClick={() => navigate("/login")}>
+            Login
+          </button>
+          <button className="btn" onClick={() => navigate("/register")}>
+            Register
+          </button>
+        </div>
+        <br />
+        <h4 className="text-white">International Artists</h4>
+        <div className="card">
+          <img src="/img/levy.jpg" alt="" className="card " />
+        </div>
+        <br />
+        <br />
+
+        <h4 className="text-white">National Artists</h4>
+
+        <div className="card">
+          <img src="/img/ubakka.jpg" alt="" className="card " />
+        </div>
       </main>
       <Footer />
     </div>
