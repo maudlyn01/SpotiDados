@@ -1,13 +1,9 @@
 export const Header = () => {
   return (
     <>
-      <header>
-        <div className="flex justify-items-start">
-          <button className="btn"> All </button>
-          <button className="btn"> Data </button>
-
-          
-        </div>
+      <header className="px-2 h-15 text-sm text-white flex items-center">
+        <img src="/img/Spoti.png" alt="" className="w-20 h-20" />
+        <p className="text-white text-2xl font-extrabold">SpotiDados</p>
       </header>
     </>
   );

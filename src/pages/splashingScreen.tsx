@@ -15,7 +15,6 @@ export const SplashingScreen = () => {
   return (
     <>
       <div className="flex items-center justify-center h-screen bg-black relative">
-   
 
         {/* Logo*/}
         <div className="flex flex-col items-center">

@@ -37,10 +37,10 @@ export const Homelogin = () => {
   };
   return (
     <>
-      <div className="bg-black min-h-screen min-w-screen">
+      <div className="bg-black min-h-screen p-5 min-w-screen">
         <Header />
-        <main>
-          <p className="text-white p-5"> Artitas Internacionais</p>
+        <main className="">
+          <p className="text-white p-5"> International Artists</p>
           <div className=" items-center p-5">
             <img
               src={images[currentIndex]}
@@ -50,7 +50,7 @@ export const Homelogin = () => {
             />
             <button
               onClick={prevSlide}
-              className="text-white bg-blue-500 rounder"
+              className="btn"
             >
               Anterior
             </button>
@@ -59,7 +59,7 @@ export const Homelogin = () => {
             </button>
           </div>
           <section>
-            <p className="text-white p-5"> Artitas Nacionais</p>
+            <p className="text-white p-5"> National Artists</p>
             <div className=" items-center p-5">
               <img
                 src={image[currentsIndex]}

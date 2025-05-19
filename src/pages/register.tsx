@@ -7,7 +7,7 @@ export const Register = () => {
       <div className="bg-black min-h-screen fle flex-1">
      
         <main className="p-2">
-          <img src="/img/logo.png" alt="" className="logo m-auto " />
+          <img src="/img/Spoti.png" alt="" className="logo m-auto " />
           <p>Create </p>
           <form className="flex flex-col p-5 items-center">
             <input type="text" placeholder="name" className="input" /><br />
