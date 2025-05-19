@@ -1,29 +1,49 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, Login, Register, User, History } from "./pages";
+import {
+  History,
+  Homelogin,
+  Login,
+  Register,
+  Home,
+  User,
+  SplashingScreen,
+} from "./pages";
 
-const router = createBrowserRouter ([
+const router = createBrowserRouter([
   {
-    path:"/",
+    path: "/",
+    element: <SplashingScreen />,
+  },
+  {
+    path: "/home",
     element: <Home />,
   },
   {
-    path:"/login",
+    path: "/login",
     element: <Login />,
   },
   {
-    path:"/register",
+    path: "/homelogin",
+    element: <Homelogin />,
+  },
+  {
+    path: "/history",
+    element: <History />,
+  },
+  {
+    path: "/register",
     element: <Register />,
   },
   {
-    path:"/user",
-    element: <User />,
+    path: "/user",
+    element: <User id={""} name={""} email={""} />,
   },
   {
-    path:"/history",
+    path: "/history",
     element: <History />,
   },
-])
+]);
 
-export const Routes = () => {
+export function Routes() {
   return <RouterProvider router={router} />;
 }
