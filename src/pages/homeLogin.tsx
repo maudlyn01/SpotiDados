@@ -9,8 +9,8 @@ import img from "/img/Anderson-Mario.jpg";
 import img1 from "/img/edmazia.jpg";
 import img2 from "/img/anselmo.png";
 import img3 from "/img/Rihanna.jpg";
-import img4 from "/img/iveth.jpg";
-import img5 from "/img/Laylizzy.jpg";
+import img4 from "/img/iveth.jpeg";
+import img5 from "/img/Laylizzy.jpeg";
 import img6 from "/img/liza.jpg";
 import img7 from "/img/fingir.jpg";
 
