@@ -4,15 +4,15 @@ import { Header } from "../components/header";
 
 export const Home = () => {
   const navigate = useNavigate();
-  
+
   return (
     <div className="bg-black min-h-screen p-5 items-center grid grid-cols-1">
       <Header />
-      <main className="p-2 flex-1">
-        
+      <main className="flex-1 p-4 ">
+
         <div className="flex justify-end">
-        <button className="btn" onClick={() => navigate("/login")}>Login</button>
-        <button className="btn" onClick={() => navigate("/register")}>Register</button>
+          <button className="btn" onClick={() => navigate("/login")}>Login</button>
+          <button className="btn" onClick={() => navigate("/register")}>Register</button>
         </div>
         <br />
         <h4 className="text-white">International Artists</h4>
@@ -28,11 +28,11 @@ export const Home = () => {
         <div className="card">
           <img src="/img/ubakka.jpg" alt="" className="card " />
         </div>
-        
+
 
       </main>
       <Footer />
     </div>
-    
+
   );
 };

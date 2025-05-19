@@ -10,8 +10,8 @@ export const Header = () => {
   return (
 
 
-    <header className="px-2 h-15 text-sm text-white flex items-center">
-        <div className="flex justify-between items-center">
+    <header className="flex px-2 h-15 text-sm text-white items-center">
+        <div className="flex">
         <img src="/img/Spoti.png" alt="" className="w-20 h-20" />
         <p className="text-white text-2xl font-extrabold">SpotiDados</p>
 
