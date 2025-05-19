@@ -11,11 +11,11 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/splashingscreen",
     element: <SplashingScreen />,
   },
   {
-    path: "/home",
+    path: "/",
     element: <Home />,
   },
   {

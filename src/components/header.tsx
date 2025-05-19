@@ -1,29 +1,24 @@
 import { NavLink } from "react-router-dom";
 
-const stylebutton = "text-white  flex flex-around  rounded-full";
 export const Header = () => {
   return (
     <>
       <header>
         <div className="p-5">
-          <button className={stylebutton}> All </button>
-          <button className={stylebutton}> Data </button>
-
           <nav className="space-x-8 text-lg p-2 text-white">
-            <NavLink to="/" className={stylebutton}>
+            <NavLink to="/" className="btn">
               Início
             </NavLink>
-            <NavLink to="/login" className={stylebutton}>
+            <NavLink to="/login" className="btn">
               Login
             </NavLink>
-
-            <NavLink to="/register">Register</NavLink>
-
-            <NavLink to="/user" className={stylebutton}></NavLink>
-            <NavLink to="/Homelogin" className={stylebutton}>
+            <NavLink to="/register" className="btn">
+              Register
+            </NavLink>
+            <NavLink to="/Homelogin" className="btn">
               Homelogin
             </NavLink>
-            <NavLink to="/history" className={stylebutton}>
+            <NavLink to="/history" className="btn">
               History
             </NavLink>
           </nav>

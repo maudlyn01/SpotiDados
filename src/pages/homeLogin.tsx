@@ -7,7 +7,7 @@ import img2 from "/img/anselmo.png";
 import img3 from "/img/Rihanna.jpg";
 import img4 from "/img/neyma.jpg";
 import img5 from "/img/levy.jpg";
-import img6 from "/img/perola.png";
+import img6 from "/img/perola.jpg";
 import img7 from "/img/ubakka.jpg";
 export const Homelogin = () => {
   //section national
