@@ -1,6 +1,6 @@
-import { Footer } from "../components/footer"
-import { Header } from "../components/header"
-import { type UserProps } from "../types/allProps"
+import { Footer } from "../components/footer";
+import { Header } from "../components/header";
+import { type UserProps } from "../types/allProps";
 
 export const User = (user: UserProps) => {
   return (
