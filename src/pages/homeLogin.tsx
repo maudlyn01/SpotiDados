@@ -28,12 +28,12 @@ export const Homelogin = () => {
   const image = [img4, img5, img6, img7];
 
   const nextSlides = () => {
-    setCurrentsIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentsIndex((prevIndex) => (prevIndex + 1) % image.length);
   };
 
   const prevSlides = () => {
     setCurrentsIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + images.length) % image.length
     );
   };
   return (
