@@ -9,10 +9,10 @@ import img from "/img/Anderson-Mario.jpg";
 import img1 from "/img/edmazia.jpg";
 import img2 from "/img/anselmo.png";
 import img3 from "/img/Rihanna.jpg";
-import img4 from "/img/neyma.jpg";
-import img5 from "/img/levy.jpg";
-import img6 from "/img/perola.jpg";
-import img7 from "/img/ubakka.jpg";
+import img4 from "/img/iveth.jpg";
+import img5 from "/img/Laylizzy.jpg";
+import img6 from "/img/liza.jpg";
+import img7 from "/img/fingir.jpg";
 
 export const Homelogin = () => {
   //section national
@@ -48,7 +48,7 @@ export const Homelogin = () => {
   const listeUsers = Users.map((person) => (
     <NavLink to="/history">
       <li className="flex flex-colunm">
-        <User className="iconUser" /> <b>{person.name}</b>
+        <User className="icon" /> <b>{person.name}</b>
       </li>
     </NavLink>
   ));
@@ -59,7 +59,7 @@ export const Homelogin = () => {
         <Header />
         <main>
           <section>
-            <p className="text-white p-5"> National Artists</p>
+            <p className="text-white p-5"> International Artists</p>
             <img
               src={images[currentIndex]}
               alt={`Imagem ${currentIndex + 1}`}
