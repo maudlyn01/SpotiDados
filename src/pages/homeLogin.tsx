@@ -16,7 +16,9 @@ import img7 from "/img/ubakka.jpg";
 export const Homelogin = () => {
   //section national
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const images = [img, img1, img6, img2, img3];
+
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -46,7 +48,7 @@ export const Homelogin = () => {
   const listeUsers = Users.map((person) => (
     <NavLink to="/history">
       <li className="flex flex-colunm">
-        <User className="icon" /> <b>{person.name}</b>
+        <User className="iconUser" /> <b>{person.name}</b>
       </li>
     </NavLink>
   ));
