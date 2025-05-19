@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { Footer } from "../components/footer"
-import { Header } from "../components/header"
-
-
-export const History = () => {
-    return (
-        
-        <div className="bg-black">
-           
-            <Header />
-            <main className="flex-1">
-=======
 import { Heart } from "@phosphor-icons/react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
@@ -28,7 +15,6 @@ export const History = () => {
     { name: "Levy", img: "./img/levy.jpg" },
     { name: "Rihanna", img: "./img/Rihanna.jpg" },
   ];
->>>>>>> 22cd1869760a031fefe2a0ed301f5695a1f3ab5b
 
   return (
     <div className="bg-black min-h-screen">
