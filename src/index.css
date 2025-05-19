@@ -1,38 +1,36 @@
 @import "tailwindcss";
 
-
-
 :root {
-    /*cores*/
-    --color-primary: #17A0f5;
-    --color-hover:#0f6194;
-    --color-surface: #000000;
-    --color-text: #ffffff;
+  /*cores*/
+  --color-primary: #17a0f5;
+  --color-hover: #0f6194;
+  --color-surface: #000000;
+  --color-text: #ffffff;
 
-    /*fontes*/
-    --font-title: 3rem;
-    --font-subtitle: 2.5rem;
-    --font-link: 1.5rem;
-    --font-paragraph: 1rem;
+  /*fontes*/
+  --font-title: 3rem;
+  --font-subtitle: 2.5rem;
+  --font-link: 1.5rem;
+  --font-paragraph: 1rem;
 
-    /*radius*/
-    --radius-spotidados: 1.25rem;
+  /*radius*/
+  --radius-spotidados: 1.25rem;
 
-    /*ícones*/
-    --icon-size: 2.5rem;
-
+  /*ícones*/
+  --icon-size: 2.5rem;
     /*card e logo*/
     --card-width: 22.5rem;
     --card-height: 11.75em;
     --logo-size: 15rem;
 
-    /*butão*/
-    --btn-width: 6.5rem;
-    --btn-height: 2.125rem;
 
-    /*input*/
-    --input-width: 18.375rem;
-    --input-height: 3.8125rem;
+  /*butão*/
+  --btn-width: 6.5rem;
+  --btn-height: 2.125rem;
+
+  /*input*/
+  --input-width: 18.375rem;
+  --input-height: 3.8125rem;
 }
 
 .btn {

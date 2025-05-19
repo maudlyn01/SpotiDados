@@ -8,11 +8,10 @@ export const Footer = () => {
             <Book className="icon"/>
             <House weight="fill" className="icon" />
             <MagnifyingGlass className="icon" />
+
           </div>
         </nav>
       </footer>
     </>
   );
 };
-
-

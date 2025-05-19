@@ -1,11 +1,7 @@
-
-
-
 export const Register = () => {
   return (
     <>
       <div className="bg-black min-h-screen fle flex-1">
-     
         <main className="p-2">
           <img src="/img/Spoti.png" alt="" className="logo m-auto " />
           <p>Create </p>
@@ -26,4 +22,3 @@ export const Register = () => {
     </>
   );
 };
-

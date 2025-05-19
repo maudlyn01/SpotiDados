@@ -1,4 +1,3 @@
-
 export const Login = () => {
   return (
     <>
@@ -17,10 +16,10 @@ export const Login = () => {
             <button className="btn">
               Login
             </button>
+
           </form>
         </main>
       </div>
     </>
-
   );
 };
