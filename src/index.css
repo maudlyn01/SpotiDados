@@ -18,6 +18,7 @@
 
   /*ícones*/
   --icon-size: 2.5rem;
+  --iconUser-size: 2em;
 
   /*card e logo*/
   --card-width: 22.5rem;
@@ -68,6 +69,11 @@
 .icon {
   width: var(--icon-size);
   height: var(--icon-size);
+  color: var(--color-text);
+}
+.iconUser {
+  width: var(--iconUser-size);
+  height: var(--iconUser-size);
   color: var(--color-text);
 }
 
