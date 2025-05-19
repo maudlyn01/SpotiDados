@@ -1,4 +1,4 @@
-export interface UserProps {
+export type UserProps= {
   id: string;
   name: string;
   email: string;
@@ -7,7 +7,6 @@ export interface UserProp {
   id: string;
   name: string;
 }
-export interface HomeProps {
+export interface HistoryProps {
   user: UserProps;
-  onLogout: () => void;
 }
