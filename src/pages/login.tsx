@@ -40,7 +40,7 @@ if (!password.trim()){
   return;
 } 
 if (username==='chil'|| email==='mchil@gmail.com'|| password==='mamm'){
-navigate("/homeLogin");
+navigate("/homeUser");
 } else{
   alert("failed")
 }

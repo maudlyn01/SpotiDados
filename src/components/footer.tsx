@@ -14,9 +14,17 @@ export const Footer = () => {
     { name: "Rihanna", img: "./img/capa_rihanna.webp", music: "Diamonds" },
   ];
   const [modalLibrary, setModalLibraryOpen] = useState(false);
+  const [modalSearcher, setModalSearcherOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
   const toggleLibrary = () => setModalLibraryOpen(!modalLibrary);
-    const [modalSearcher, setModalSearcherOpen] = useState(false);
-  const toggleSearcher = () => setModalSearcherOpen(!modalSearcher);
+  const toggleSearcher = () => {setModalSearcherOpen(!modalSearcher);
+  setSearchTerm("");
+  }
+  const filterArtist=allArtists.filter((artist)=>
+    `${artist.name} ${artist.music}`.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  
 
   return (
     <>
@@ -29,9 +37,10 @@ export const Footer = () => {
             {modalLibrary ? <X size={40} /> : <Book size={40} />}
           </button>            
              {modalLibrary && (
-        <div className="absolute bottom-10 -left-10 -right-10 bg-black p-4 z-40">
-          <ol className="text-white space-y-4">
-            {allArtists.map((artist) => (
+        <div className=" absolute bottom-13 left-0 right-0 bg-black p-4 z-40 max-h-180 overflow-y-auto ">
+         
+          <ol className="text-white space-y-4 text-center top-50">
+            {filterArtist.map((artist) => (
               <li key={artist.name} className="flex items-center gap-4">
                 <img
                   src={artist.img}
@@ -44,6 +53,9 @@ export const Footer = () => {
                 </div>
               </li>
             ))}
+            {filterArtist.length===0 &&(
+              <p className="text-red-400 ">Falha: Resultado não encontrado</p>
+            )}
           </ol>
         </div>
       )}
@@ -62,6 +74,8 @@ export const Footer = () => {
           <input
             type="text"
             placeholder="Search Artist or Music..."
+            value={searchTerm}
+            onChange={(e=>setSearchTerm(e.target.value))}
             className="w-full p-2 rounded bg-white text-black placeholder-blue-500"
           />
         </div>
