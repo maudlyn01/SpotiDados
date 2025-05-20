@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { Navigation } from "../components/buttons";
+import { useNavigate } from "react-router-dom";
+
+
 
 const bd= [{username:"chil", email:"mchil@gmail.com", password:"mamm"}];
 
 
+
 export const Login = () => {
+  const navigate= useNavigate();
 
   const [username, setUsername] =useState("");
   const [email, setEmail] =useState("");
@@ -15,12 +20,12 @@ function validateField(e:React.FormEvent){
   
 
 if (!username || !email || ! password){
-  alert ("preencha os campos");
+  alert ("fields required");
   return;
 }
 const foundUser=bd.find((user) => username===username && user.email===email && user.password===password);
 if (foundUser){
-  alert("sucess");
+  alert("success");
 
 } else{
   alert( "input invalid")
@@ -34,6 +39,11 @@ if (!password.trim()){
   alert("password required");
   return;
 } 
+if (username==='chil'|| email==='mchil@gmail.com'|| password==='mamm'){
+navigate("/homeLogin");
+} else{
+  alert("failed")
+}
 }
 
   return (
@@ -56,9 +66,9 @@ if (!password.trim()){
             <button type="submit" className="btn" >
               Login
             </button>
-
           </form>
         </main>
+        <Navigation backTo="/homeUser" />      
       </div>
     </>
   );
