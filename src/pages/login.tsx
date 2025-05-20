@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import { Navigation } from '../components/buttons'
 import { GetUsers } from '../data/userdata'
+
 
 export const Login = () => {
   const navigate = useNavigate()
@@ -19,6 +21,7 @@ export const Login = () => {
     }
 
     const users = GetUsers()
+
 
     const foundUser = users.find(
       (user) =>
