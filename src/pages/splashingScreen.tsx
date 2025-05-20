@@ -9,6 +9,7 @@ export const SplashingScreen = () => {
       navigate("/home");
     }, 2000);
 
+
     return () => clearTimeout(timer);
   }, [navigate]);
   return (
