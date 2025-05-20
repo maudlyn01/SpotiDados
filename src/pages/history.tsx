@@ -4,7 +4,7 @@ import { Navigation } from "../components/buttons";
 import { useLocation } from "react-router-dom";
 
 export const History = () => {
-  const nationalArtists = [
+  const artists = [
     { name: "Neyma", img: "./img/neyma.webp", music: "Arromba" },
     { name: "Ubaka", img: "./img/ubakka.webp", music: "Wene" },
     { name: "Lizha James", img: "./img/liza.webp", music: "É Obra" },
@@ -29,9 +29,8 @@ export const History = () => {
           <h2 className="text-blue-100 underline text-xl mb-4 font-semibold ">
             {user.name}
           </h2>
-          <h2 className="text-white text-xl mb-4">National Artists</h2>
           <ol className="text-white space-y-4 ">
-            {nationalArtists.map((artist) => (
+            {artists.map((artist) => (
               <li key={artist.name} className="flex items-center gap-4">
                 <img
                   src={artist.img}

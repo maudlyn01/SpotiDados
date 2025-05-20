@@ -31,10 +31,10 @@ export const Header = () => {
           <NavLink to="/user" className="burguerMenu" onClick={modal}>
             My Profile
           </NavLink>
-          <NavLink to="/Homelogin" className="burguerMenu" onClick={modal}>
+          <NavLink to="/homeUser" className="burguerMenu" onClick={modal}>
             Home
           </NavLink>
-          <NavLink to="/" className="burguerMenu" onClick={modal}>
+          <NavLink to="/home" className="burguerMenu" onClick={modal}>
             Log Out
           </NavLink>
           

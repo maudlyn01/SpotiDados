@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Navigation } from "../components/buttons";
 
 const bd= [{username:"chil", email:"mchil@gmail.com", password:"mamm"}];
 
@@ -38,9 +39,12 @@ if (!password.trim()){
   return (
     <>
       <div className="bg-black min-h-screen">
+        {/**<Navigation backTo="/home" /> */}
         
+       
 
         <main>
+           <Navigation backTo="/home" />
           <img src="/img/Spoti.png" alt="logo" className="p-4 mx-auto" />
           <p>Create </p>
           <form className="flex flex-col p-5 items-center" onSubmit={validateField}>
