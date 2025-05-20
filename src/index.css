@@ -68,7 +68,8 @@
 /*Labels*/
 
 .btn {
-  margin: 0.5em auto;
+  margin: 0.2rem;
+  margin-left: 0.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,6 +116,19 @@
   border-radius: var(--radius-spotidados);
   padding: 0 1rem;
   font-size: var(--font-paragraph);
+}
+.burguerMenu {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  width: 8rem;
+  height: 3rem;
+  border-radius: var(--radius-spotidados);
+  padding: 0 1rem;
+  font-size: var(--font-paragraph);
+}
+.burguerMenu:hover{
+  color:var(--color-hover);
+  font-weight:bold;
 }
 
 .icon {
