@@ -4,7 +4,6 @@ import { List, X } from "@phosphor-icons/react";
 
 export const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
-
   const modal = () => setModalOpen(!modalOpen);
 
   return (
@@ -24,22 +23,21 @@ export const Header = () => {
         </button>
       </div>
       {modalOpen && (
+        
         <nav className="flex flex-col items-center space-y-3 mt-4 md:hidden text-center">
-          <NavLink to="/" className="btn" onClick={modal}>
-            Início
+          <NavLink to="/" className="burguerMenu" onClick={modal}>
+            Start
           </NavLink>
-          <NavLink to="/login" className="btn" onClick={modal}>
-            Login
+          <NavLink to="/user" className="burguerMenu" onClick={modal}>
+            My Profile
           </NavLink>
-          <NavLink to="/register" className="btn" onClick={modal}>
-            Register
+          <NavLink to="/Homelogin" className="burguerMenu" onClick={modal}>
+            Home
           </NavLink>
-          <NavLink to="/Homelogin" className="btn" onClick={modal}>
-            Homelogin
+          <NavLink to="/" className="burguerMenu" onClick={modal}>
+            Log Out
           </NavLink>
-          <NavLink to="/history" className="btn" onClick={modal}>
-            History
-          </NavLink>
+          
         </nav>
       )}
     </header>
