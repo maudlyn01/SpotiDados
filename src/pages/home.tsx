@@ -27,7 +27,7 @@ export const Home = () => {
   return (
     <div className="bg-black min-h-screen p-5 items-center grid grid-cols-1">
       <Header />
-      <main className="p-2 flex-1">
+      <main className=" flex-1">
         <div className="flex justify-end">
           <button className="btn" onClick={() => navigate("/login")}>
             Login
@@ -37,25 +37,26 @@ export const Home = () => {
           </button>
         </div>
         <br />
-        <section>
-          <p className="text-white p-5"> International Artists</p>
+
+        <h4 className="text-white p-5"> International Artists</h4>
+
+        <section className="card">
           <img src={images[currentIndex]} alt={`Imagem ${currentIndex + 1}`} />
-          <div className="flex justify-between">
-            <button onClick={prevSlide}>
-              <ArrowLeft className="btnNav" />
-            </button>
-            <button onClick={nextSlide}>
-              <ArrowRight className="btnNav" />
-            </button>
-          </div>
         </section>
-        <br />
+        <div className="flex justify-between">
+          <button onClick={prevSlide}>
+            <ArrowLeft className="btnNav" />
+          </button>
+          <button onClick={nextSlide}>
+            <ArrowRight className="btnNav" />
+          </button>
+        </div>
         <br />
 
         <h4 className="text-white">National Artists</h4>
 
         <div className="card">
-          <img src="/img/ubakka.jpg" alt="" className="" />
+          <img src={images[currentIndex]} alt={`Imagem ${currentIndex + 1}`} />
         </div>
         <div className="flex justify-between">
             <button onClick={prevSlide}>
@@ -66,7 +67,9 @@ export const Home = () => {
             </button>
         </div>
       </main>
+      <br />
       <Footer />
     </div>
+  
   );
 };
