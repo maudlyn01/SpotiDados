@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { List, X } from "@phosphor-icons/react";
+import { List, X } from "phosphor-react";
 
 export const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -8,21 +8,23 @@ export const Header = () => {
   const modal = () => setModalOpen(!modalOpen);
 
   return (
-    <header className="px-2 h-15 text-sm text-white flex items-center">
+
+
+    
+    <header className="w-full px-4 py-2 bg-black text-sm text-white shadow-md ">
       <div className="flex justify-between items-center">
-        <img src="/img/Spoti.png" alt="" className="w-20 h-20" />
-        <p className="text-white text-2xl font-extrabold">SpotiDados</p>
+        <img src="/img/Spoti.png" alt="" className="w-20 h-20 object-contain" />
 
         <button
           onClick={modal}
           className="md:hidden text-white"
           aria-label="Toggle menu"
         >
-          {modalOpen ? <X size={20} /> : <List size={20} />}
+          {modalOpen ? <X size={28} /> : <List size={28} />}
         </button>
       </div>
       {modalOpen && (
-        <nav className="flex flex-col space-y-3 mt-4 md:hidden center">
+        <nav className="flex flex-col items-center space-y-3 mt-4 md:hidden text-center">
           <NavLink to="/" className="btn" onClick={modal}>
             Início
           </NavLink>

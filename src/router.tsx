@@ -6,15 +6,16 @@ import {
   Register,
   Home,
   SplashingScreen,
+  User,
 } from "./pages";
 
 const router = createBrowserRouter([
   {
-    path: "/splashingscreen",
+    path: "/",
     element: <SplashingScreen />,
   },
   {
-    path: "/",
+    path: "/home",
     element: <Home />,
   },
   {
@@ -34,9 +35,10 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: "/history",
-    element: <History />,
+    path: "/user",
+    element: <User id={""} name={""} email={""} />,
   },
+  
 ]);
 
 export function Routes() {

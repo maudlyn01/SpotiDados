@@ -21,7 +21,7 @@
 
   /*card e logo*/
   --card-width: 22.5rem;
-  --card-height: 11.75em;
+  --card-height: 14rem;
   --logo-size: 15rem;
   --iconUser-size: 2em;
 
@@ -34,8 +34,41 @@
   --input-height: 3.8125rem;
 }
 
+/*Font*/
+.text-title {
+  font-size: var(--font-title);
+}
+
+.text-subtitle {
+  font-size: var(--font-subtitle);
+}
+
+.text-link {
+  font-size: var(--font-link);
+}
+
+.text-paraghraph {
+  font-size: var(--font-paragraph);
+}
+
+/*color*/
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-color {
+  color: var(--color-text);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+/*Labels*/
+
 .btn {
-  margin: 0.5em;
+  margin: 0.5em auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,6 +107,7 @@
 
 .input {
   background-color: var(--color-surface);
+ margin: 0.5rem;
   color: var(--color-text);
   border: 1px solid var(--color-hover);
   width: var(--input-width);

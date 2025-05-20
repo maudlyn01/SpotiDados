@@ -1,13 +1,13 @@
-export interface UserProps {
-  id: number;
+export type UserProps= {
+  id: string;
   name: string;
   email: string;
 }
-export interface UserProp {
-  id: number;
-  name: string;
+export interface NavigationProps {
+  backTo?: string;
+  nextTo?: string;
 }
-export interface HomeProps {
+
+export interface HistoryProps {
   user: UserProps;
-  onLogout: () => void;
 }

@@ -1,22 +1,28 @@
+
+
 export const Users = [
   {
-    id: 0,
-    name: "Anjo Gabriel",
-  },
-  {
-    id: 0,
+    id: 1,
     name: "Chilzia Macamo",
+    email: "chilzia@gmail.com",
   },
   {
-    id: 0,
+    id: 2,
+    name: "Gabriel Cuna",
+    email: "gabriel@gmail.com",
+  }, {
+    id: 3,
     name: "Luco Vilanculos",
+    email: "luco@gmail.com",
   },
   {
-    id: 0,
+    id: 4,
     name: "Maria Genia",
+    email: "maria@gmail.com",
   },
   {
-    id: 0,
+    id: 5,
     name: "Maud Uate",
+    email: "maud@gmail.com",
   },
 ];
