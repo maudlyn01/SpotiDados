@@ -28,7 +28,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className=" h-16 w-full bg-black text-sm text-white fixed bottom-0 left-10 z-50">
+      <footer className=" h-16 w-full bg-black text-sm text-white fixed bottom-0 left-10 ri z-50">
         <nav className="flex justify-between items-center h-full">
           <button
             onClick={toggleLibrary}
