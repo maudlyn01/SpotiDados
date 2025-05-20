@@ -107,7 +107,6 @@ export const Home = () => {
             </button>
           </div>
       </main>
-
     </div>
   
   );

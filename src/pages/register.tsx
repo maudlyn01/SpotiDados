@@ -1,46 +1,95 @@
 import { Navigation } from "../components/buttons";
+import { useState } from "react";
+
+import type { ValidationProps } from "../types/allProps";
+import { addUser } from "../data/userdata";
 
 export const Register = () => {
+  const [formData, setFormData] = useState<ValidationProps>({
+    name: '',
+    surname: '',
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {name, value } = e.target
+    setFormData((prev) => ({...prev,[name]: value}))
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    addUser(formData)
+    alert("Usario cadastrado com sucesso!")
+    setFormData({name: '', surname: '', username: '', email: '', password: '', confirmPassword: '' })
+  }
+  
   return (
     <>
       <div className="bg-surface min-h-screen  flex-1">
         <main className="p-2">
           <img src="/img/Spoti.png" alt="" className="logo m-auto " />
-          <p>Create </p>
-          <form className="flex flex-col p-5 items-center">
+          <p>Create</p>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center">
             <input type="text" 
-              placeholder="name" 
+              name="name"
+              placeholder="Name"
+              onChange={handleChange} 
               className="input" 
             />
+
             <br />
+
             <input type="text" 
-              placeholder="surname" 
+              name="surname"
+              placeholder="Surname"
+              onChange={handleChange}
+              className="input" 
+            />
+
+            <br />
+
+            <input type="text"
+              name="username"
+              placeholder="Username"
+              onChange={handleChange}
+              className="input" 
+            />
+
+            <br />
+
+            <input type="email"
+              name="email"
+              placeholder="email"
+              onChange={handleChange}
               className="input" 
             />
             <br />
-            <input type="text" 
-              placeholder="username" 
+
+            <input type="password"
+              name="password" 
+              placeholder="Password"
+              onChange={handleChange}
               className="input" 
             />
+
             <br />
-            <input type="email" 
-              placeholder="email" 
-              className="input" 
-            />
-            <br />
-            
-            <input type="password" 
-              placeholder="password" 
-              className="input" 
-            />
-            <br />
+
             <input
               type="password"
-              placeholder="comfirm password"
+              name="confirm Password"
+              placeholder="confirm password"
+              onChange={handleChange}
               className="input"
             />
+
             <br />
-            <button className="btn"
+
+            <button
+              type="submit"
+              className="btn"
             >
               Register
             </button>

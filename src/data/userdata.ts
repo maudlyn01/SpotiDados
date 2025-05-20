@@ -1,4 +1,4 @@
-import type { UserProps } from "../types/allProps";
+import type { ValidationProps } from "../types/allProps";
 
 
 export const Users = [
@@ -30,13 +30,14 @@ export const Users = [
 
 const storage_key = 'users'
 
-export const getUsers = (): UserProps[] => {
+export const getUsers = (): ValidationProps[] => {
   const data = localStorage.getItem(storage_key)
   return data ? JSON.parse(data) : []
 }
 
-export const addUser = (user: UserProps): void => {
+export const addUser = (user: ValidationProps): void => {
   const users = getUsers()
   users.push(user)
   localStorage.setItem(storage_key, JSON.stringify(users))
 }
+

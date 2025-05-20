@@ -16,7 +16,7 @@ function validateField(e:React.FormEvent){
   
 
 if (!username || !email || ! password){
-  alert ("Preencha os campos");
+  alert ("Preencha os campos!");
   return;
 }
 const foundUser=bd.find((user) => username===username && user.email===email && user.password===password);

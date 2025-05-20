@@ -7,7 +7,8 @@ export const SplashingScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/home");
-    }, 3000);
+    }, 2000);
+
 
     return () => clearTimeout(timer);
   }, [navigate]);
@@ -15,7 +16,7 @@ export const SplashingScreen = () => {
     <>
       <div className="flex items-center justify-center h-screen bg-black">
         <div className="flex flex-col items-center">
-          <img src="/Spoti.png" alt="spotidados logo" className="w-64 h-auto animate-pulse" />
+          <img src="/img/Spoti.png" alt="" className="logo animate-pulse m-auto " />
         </div>
       </div>
     </>
