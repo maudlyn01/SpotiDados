@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import { Header } from "../components/header";
 
+
 import img from "/img/fingir.webp";
 import img1 from "/img/iveth.webp";
 import img2 from "/img/liza.webp";
@@ -14,12 +15,13 @@ import img5 from "/img/capa_Ubaka.webp";
 import img6 from "/img/Mr.-Bow-Vou-te-Amar-1.webp";
 import img7 from "/img/capa4.webp";
 import img8 from "/img/capa3.webp";
-import imgInter1 from "/img/NICK.webp";
+import imgInter1 from "/img/capaMichel.webp";
 import imgInter2 from "/img/luan.webp";
 import imgInter3 from "/img/perola.webp";
 import imgInter4 from "/img/capa1.webp";
 import imgInter5 from "/img/capa-ariana.webp";
-import imgInter6 from "/img/capaMichel.webp";
+import imgInter6 from "/img/NICK.webp";
+
 export const Home = () => {
   const navigate = useNavigate();
   //section national
@@ -33,7 +35,7 @@ export const Home = () => {
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + image.length) % image.length
     );
   };
   //section international
@@ -48,12 +50,12 @@ export const Home = () => {
   ];
 
   const nextSlides = () => {
-    setCurrentsIndex((prevsIndex) => (prevsIndex + 1) % image.length);
+    setCurrentsIndex((prevsIndex) => (prevsIndex + 1) % images.length);
   };
 
   const prevSlides = () => {
     setCurrentsIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % image.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
   return (
@@ -98,7 +100,8 @@ export const Home = () => {
             />
           </div>
         </section>
-        <div className="flex justify-between">
+
+          <div className="flex justify-between ">
             <button onClick={prevSlides}>
               <ArrowLeft className="btnNav" />
             </button>

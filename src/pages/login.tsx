@@ -1,64 +1,74 @@
-import { useState } from "react";
-
-import { Navigation } from "../components/buttons";
-
-const bd= [{username:"chil", email:"mchil@gmail.com", password:"mamm"}];
-
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Navigation } from '../components/buttons'
+import { GetUsers } from '../data/userdata'
 
 export const Login = () => {
+  const navigate = useNavigate()
 
-  const [username, setUsername] =useState("");
-  const [email, setEmail] =useState("");
-  const [password, setPassword] =useState("");
+  const [identifier, setIdentifier] = useState('') // username ou email
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
 
-function validateField(e:React.FormEvent){
-  e.preventDefault();
-  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
 
-if (!username || !email || ! password){
-  alert ("Preencha os campos!");
-  return;
-}
-const foundUser=bd.find((user) => username===username && user.email===email && user.password===password);
-if (foundUser){
-  alert("sucess");
+    if (!identifier.trim() || !password.trim()) {
+      setError('All fields are required.')
+      return
+    }
 
-} else{
-  alert( "input invalid")
-}
+    const users = GetUsers()
 
-if (!email.trim()){
-  alert("email required");
-  return;
-}
-if (!password.trim()){
-  alert("password required");
-  return;
-} 
-}
+    const foundUser = users.find(
+      (user) =>
+        (user.email === identifier || user.name === identifier) &&
+        user.password === password
+    )
+
+    if (foundUser) {
+      localStorage.setItem('currentUser', foundUser.name)
+      alert(`Bem-vindo, ${foundUser.name}!`)
+      navigate('/homeUser')
+    } else {
+      setError('User does not exist')
+    }
+  }
 
   return (
-    <>
-      <div className="bg-primary min-h-screen">
-        
+    <div className="bg-surface min-h-screen ">
+      <main className="p-2  flex-1">
+        <img src="/img/Spoti.png" alt="logo" className="logo m-auto" />
+        <br />
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center">
+          <input
+            type="text"
+            placeholder="E-mail our Username"
+            value={identifier}
+            onChange={(e) => setIdentifier(e.target.value)}
+            className="input"
+          
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="input"
+            
+          />
+          {error && <p className="text-red-400 mb-2">{error}</p>}
+          <p className="text-paragraph text-color">Forgot Password?</p>
+          <button
+            type="submit"
+            className="btn"
+          >
+            Login
+          </button>
+        </form>
+      </main>
 
-        <main>
-          <img src="/img/Spoti.png" alt="logo" className="p-4 mx-auto" />
-          <p>Create </p>
-          <form className="flex flex-col p-5 items-center" onSubmit={validateField}>
-            <input type="text" placeholder="username" className="input" value={username} onChange={(ev) => setUsername(ev.target.value)}/><br />
-            <input type="email" placeholder="email" className="input"  value={email} onChange={(ev) => setEmail(ev.target.value)}/><br />
-            <input type="password" placeholder="password" className="input" value={password} onChange={(ev) => setPassword(ev.target.value)}/><br />
-            <p className="text-white">Forgot Password?</p>
-            <br />
-            <button type="submit" className="btn" >
-              Login
-            </button>
-
-          </form>
-        </main>
-        <Navigation backTo="/home" />
-      </div>
-    </>
-  );
-};
+      <Navigation backTo="/home" />
+    </div>
+  )
+}

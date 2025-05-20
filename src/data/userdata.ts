@@ -28,16 +28,31 @@ export const Users = [
   },
 ];
 
-const storage_key = 'users'
+const storageKey = 'users';
+const sessionKey = 'loggedUser';
 
-export const getUsers = (): ValidationProps[] => {
-  const data = localStorage.getItem(storage_key)
+export const GetUsers = (): ValidationProps[] => {
+  const data = localStorage.getItem(storageKey)
   return data ? JSON.parse(data) : []
 }
 
-export const addUser = (user: ValidationProps): void => {
-  const users = getUsers()
+export const AddUsers = (user: ValidationProps): boolean => {
+  const users = GetUsers()
+
+  const emailExists = users.some((u) => u.email === user.email)
+  if (emailExists) return false
+
   users.push(user)
-  localStorage.setItem(storage_key, JSON.stringify(users))
+  localStorage.setItem(storageKey, JSON.stringify(users))
+  return true
+}
+
+export const SaveSession = (user: ValidationProps): void => {
+  localStorage.setItem(sessionKey, JSON.stringify(user))
+}
+
+export const GetSession = (): ValidationProps | null => {
+  const session = localStorage.getItem(sessionKey)
+  return session ? JSON.parse(session) : null
 }
 

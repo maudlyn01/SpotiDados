@@ -2,7 +2,7 @@ import { Navigation } from "../components/buttons";
 import { useState } from "react";
 
 import type { ValidationProps } from "../types/allProps";
-import { addUser } from "../data/userdata";
+import { AddUsers } from "../data/userdata";
 
 export const Register = () => {
   const [formData, setFormData] = useState<ValidationProps>({
@@ -21,18 +21,18 @@ export const Register = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    addUser(formData)
-    alert("Usario cadastrado com sucesso!")
+    AddUsers(formData)
+    alert("User registered successfully!")
     setFormData({name: '', surname: '', username: '', email: '', password: '', confirmPassword: '' })
   }
   
   return (
     <>
-      <div className="bg-surface min-h-screen  flex-1">
+      <div className="bg-surface min-h-screen flex-1">
         <main className="p-2">
           <img src="/img/Spoti.png" alt="" className="logo m-auto " />
           <p>Create</p>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center">
+          <form onSubmit={handleSubmit} className="flex flex-col items-center">
             <input type="text" 
               name="name"
               placeholder="Name"

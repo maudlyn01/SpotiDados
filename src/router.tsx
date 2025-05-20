@@ -38,7 +38,6 @@ const router = createBrowserRouter([
     path: "/user",
     element: <User id={""} name={""} email={""} />,
   },
-  
 ]);
 
 export function Routes() {
