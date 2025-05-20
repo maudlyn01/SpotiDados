@@ -3,10 +3,11 @@ export type UserProps= {
   name: string;
   email: string;
 }
-export interface UserProp {
-  id: string;
-  name: string;
+export interface NavigationProps {
+  backTo?: string;
+  nextTo?: string;
 }
+
 export interface HistoryProps {
   user: UserProps;
 }

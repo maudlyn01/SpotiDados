@@ -1,3 +1,5 @@
+import { Navigation } from "../components/buttons";
+
 export const Register = () => {
   return (
     <>
@@ -25,6 +27,7 @@ export const Register = () => {
             <button className="btn">Register</button>
           </form>
         </main>
+        <Navigation backTo="/home" />
       </div>
     </>
   );

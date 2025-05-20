@@ -87,25 +87,12 @@ export const Home = () => {
         </section>
         <br />
         <br />
-        <section>
-          <h4 className="text-white "> International Artists</h4>
-          <div className="card">
-            <img
-              className="mx-auto"
-              src={images[currentsIndex]}
-              alt={`Imagem ${currentsIndex + 1}`}
-            />
-          </div>
 
-          <div className="flex justify-between">
-            <button onClick={prevSlides}>
-              <ArrowLeft className="btnNav" />
-            </button>
-            <button onClick={nextSlides}>
-              <ArrowRight className="btnNav" />
-            </button>
-          </div>
-        </section>
+        <h4 className="text-white">National Artists</h4>
+
+        <div className="card">
+          <img src="/img/ubakka.jpg" alt="" className="card " />
+        </div>
       </main>
       <Footer />
     </div>
