@@ -19,16 +19,16 @@ export const History = () => {
     }
 
     const nationalArtists = [
-        { name: "Neyma", img: "./img/neyma.jpg" },
-        { name: "Ubaka", img: "./img/ubakka.jpg" },
-        { name: "Edmazia", img: "./img/edmazia.jpg" },
-        { name: "Perola", img: "./img/perola.jpg" },
+        { name: "Neyma", img: "./img/neyma.webp" },
+        { name: "Ubaka", img: "./img/ubakka.webp" },
+        { name: "Edmazia", img: "./img/edmazia.webp" },
+        { name: "Perola", img: "./img/perola.webp" },
     ];
     const internationalArtists = [
-        { name: "Anderson Mario", img: "./img/Anderson-Mario.jpg" },
-        { name: "Anselmo", img: "./img/anselmo.png" },
-        { name: "Levy", img: "./img/levy.jpg" },
-        { name: "Rihanna", img: "./img/Rihanna.jpg" },
+        { name: "Anderson Mario", img: "./img/Anderson-Mario.webp" },
+        { name: "Anselmo", img: "./img/anselmo.webp" },
+        { name: "Levy", img: "./img/levy.webp" },
+        { name: "Rihanna", img: "./img/Rihanna.webp" },
     ];
 
     return (
