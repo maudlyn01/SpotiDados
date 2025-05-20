@@ -37,8 +37,8 @@ export const Home = () => {
           </button>
         </div>
         <br />
-        <section>
-          <p className="text-white p-5"> International Artists</p>
+        <section className="overflow-hidden">
+          <h4 className="text-white p-5"> International Artists</h4>
           <img src={images[currentIndex]} alt={`Imagem ${currentIndex + 1}`} />
           <div className="flex justify-between">
             <button onClick={prevSlide}>
@@ -49,11 +49,9 @@ export const Home = () => {
             </button>
           </div>
         </section>
-        <br />
-        <br />
 
+           <section className="overflow-hidden">
         <h4 className="text-white">National Artists</h4>
-
         <div className="card">
           <img src="/img/ubakka.jpg" alt="" className="" />
         </div>
@@ -65,8 +63,9 @@ export const Home = () => {
               <ArrowRight className="btnNav" />
             </button>
         </div>
+        </section>
       </main>
-      <Footer />
+   
     </div>
   );
 };

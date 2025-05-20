@@ -17,7 +17,7 @@ import img5 from "/img/Laylizzy.jpeg";
 import img6 from "/img/liza.jpg";
 import img7 from "/img/fingir.jpg";
 
-export const Homelogin = () => {
+export const HomeUser = () => {
   //section national
   const [currentIndex, setCurrentIndex] = useState(0);
 
