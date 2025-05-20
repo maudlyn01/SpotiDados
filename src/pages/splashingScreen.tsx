@@ -6,7 +6,7 @@ export const SplashingScreen = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/splashingscreen");
+      navigate("/home");
     }, 3000);
 
     return () => clearTimeout(timer);

@@ -13,7 +13,7 @@ import img4 from "/img/ubakka.webp";
 import img5 from "/img/Mr.-Bow-Vou-te-Amar-1.webp";
 import imgInter1 from "/img/NICK.webp";
 import imgInter2 from "/img/luan.webp";
-import imgInter4 from "/img/rihana.webp";
+import imgInter4 from "/img/capa_rihanna.webp";
 
 export const Homelogin = () => {
   //section national
