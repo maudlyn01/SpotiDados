@@ -9,11 +9,11 @@ import img from "/img/fingir.webp";
 import img1 from "/img/iveth.webp";
 import img2 from "/img/liza.webp";
 import img3 from "/img/neyma.webp";
-import img4 from "/img/ubakka.webp";
+import img4 from "/img/capa_Ubaka.webp";
 import img5 from "/img/Mr.-Bow-Vou-te-Amar-1.webp";
 import imgInter1 from "/img/NICK.webp";
 import imgInter2 from "/img/luan.webp";
-import imgInter4 from "/img/rihana.webp";
+import imgInter4 from "/img/capa_rihanna.webp";
 
 export const HomeUser = () => {
   //section national

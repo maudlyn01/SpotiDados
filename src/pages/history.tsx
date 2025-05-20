@@ -12,7 +12,7 @@ export const History = () => {
             <div className="bg-black min-h-screen text-white p-5">
                 <Header />
                 <main className="flex-1 p-4">
-                    <Navigation backTo="/homelogin" />
+                    <Navigation backTo="/homeUser" />
                     <p className="text-red-500">Usuário não encontrado.</p>
                 </main>
                 <Footer />
@@ -21,16 +21,16 @@ export const History = () => {
     }
 
     const nationalArtists = [
-        { name: "Neyma", img: "./img/neyma.webp" },
-        { name: "Ubaka", img: "./img/ubakka.webp" },
-        { name: "Edmazia", img: "./img/edmazia.webp" },
-        { name: "Perola", img: "./img/perola.webp" },
+        { name: "Neyma", img: "./img/neyma.webp" ,music:"Arromba"},
+        { name: "Ubaka", img: "./img/ubakka.webp" ,music:"Wene"},
+        { name: "Lizha James", img: "./img/liza.webp" ,music:"É Obra"},
+        { name: "Mr Bow", img: "./img/Mr.-Bow-Vou-te-Amar-1.webp",music:"Nr. 1" },
     ];
     const internationalArtists = [
-        { name: "Anderson Mario", img: "./img/Anderson-Mario.webp" },
-        { name: "Anselmo", img: "./img/anselmo.webp" },
-        { name: "Levy", img: "./img/levy.webp" },
-        { name: "Rihanna", img: "./img/Rihanna.webp" },
+        { name: "Luan", img: "./img/luan.webp" ,music:"Eu Volto"},
+        { name: "Nicky Minaj", img: "./img/NICK.webp",music:"Party" },
+        { name: "Michel Jackson", img: "./img/capaMichel.webp" ,music:"Thriller"},
+        { name: "Rihanna", img: "./img/capa_rihanna.webp" ,music:"Diamonds"},
     ];
 
     return (
@@ -38,7 +38,7 @@ export const History = () => {
             <Header />
             <main className="flex-1 p-4 pb-20">
                
-                <Navigation backTo="/homelogin" />
+                <Navigation backTo="/homeUser" />
                 <h2 className="text-white text-2xl font-bold mb-4 justify-center "> History of Musics</h2>
                 <h2 className="text-blue-100 underline text-xl mb-4 font-semibold ">{user.name}</h2>
                 <h2 className="text-white text-xl mb-4">National Artists</h2>
