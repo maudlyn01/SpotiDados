@@ -1,7 +1,7 @@
 export type UserProps= {
-  id: string;
   name: string;
   email: string;
+  password: string & number;
 }
 export interface NavigationProps {
   backTo?: string;

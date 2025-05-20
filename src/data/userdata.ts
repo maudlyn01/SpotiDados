@@ -1,3 +1,4 @@
+import type { UserProps } from "../types/allProps";
 
 
 export const Users = [
@@ -26,3 +27,16 @@ export const Users = [
     email: "maud@gmail.com",
   },
 ];
+
+const storage_key = 'users'
+
+export const getUsers = (): UserProps[] => {
+  const data = localStorage.getItem(storage_key)
+  return data ? JSON.parse(data) : []
+}
+
+export const addUser = (user: UserProps): void => {
+  const users = getUsers()
+  users.push(user)
+  localStorage.setItem(storage_key, JSON.stringify(users))
+}
