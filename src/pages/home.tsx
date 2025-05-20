@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { ArrowRight, ArrowLeft } from "phosphor-react";
 import { useState } from "react";
@@ -108,7 +107,6 @@ export const Home = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

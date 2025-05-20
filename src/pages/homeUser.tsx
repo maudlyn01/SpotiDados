@@ -15,7 +15,7 @@ import imgInter1 from "/img/NICK.webp";
 import imgInter2 from "/img/luan.webp";
 import imgInter4 from "/img/capa_rihanna.webp";
 
-export const Homelogin = () => {
+export const HomeUser = () => {
   //section national
   const [currentIndex, setCurrentIndex] = useState(0);
 
