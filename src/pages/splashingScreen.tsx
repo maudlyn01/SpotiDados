@@ -1,25 +1,22 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { StatusBar } from "../components/networkTimeBar";
 
 export const SplashingScreen = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/");
-    }, 3000);
+      navigate("/home");
+    }, 2000);
+
 
     return () => clearTimeout(timer);
   }, [navigate]);
   return (
     <>
-      <div className="flex items-center justify-center h-screen bg-black relative">
-        <StatusBar />
-
-        {/* Logo*/}
+      <div className="flex items-center justify-center h-screen bg-black">
         <div className="flex flex-col items-center">
-          <img src="/logo.png" alt="spotidados logo" className="w-64 h-auto" />
+          <img src="/img/Spoti.webp" alt="" className="logo animate-pulse m-auto " />
         </div>
       </div>
     </>

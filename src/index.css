@@ -1,50 +1,116 @@
 @import "tailwindcss";
 
-
-
 :root {
-    /*cores*/
-    --color-primary: #17A0f5;
-    --color-hover:#0f6194;
-    --color-surface: #000000;
-    --color-text: #ffffff;
+  /*cores*/
+  --color-primary: #17a0f5;
+  --color-hover: #0f6194;
+  --color-surface: #000000;
+  --color-text: #ffffff;
+  --color-icons: #6c757d;
+  --color-error: #d90429;
 
-    /*fontes*/
-    --font-title: 3rem;
-    --font-subtitle: 2.5rem;
-    --font-link: 1.5rem;
-    --font-paragraph: 1rem;
+  /*fontes*/
+  --font-title: 3rem;
+  --font-subtitle: 2.5rem;
+  --font-subtitles: 2rem;
+  --font-link: 1.5rem;
+  --font-paragraph: 1rem;
 
-    /*radius*/
-    --radius-spotidados: 1.25rem;
+  /*radius*/
+  --radius-spotidados: 1.25rem;
 
-    /*ícones*/
-    --icon-size: 2.5rem;
+  /*ícones*/
+  --icon-size: 2.5rem;
 
-    /*card e logo*/
-    --card-width: 22.5rem;
-    --card-height: 11.75em;
-    --logo-size: 24rem;
+  /*ícones Form*/
+  --iconForm-size: 1.5rem;
 
-    /*butão*/
-    --btn-width: 6.5rem;
-    --btn-height: 2.125rem;
+  /*card e logo*/
+  --card-width: 22.5rem;
+  --card-height: 22rem;
+  --logo-size: 15rem;
+  --iconUser-size: 2em;
 
-    /*input*/
-    --input-width: 18.375rem;
-    --input-height: 3.8125rem;
+  /*butão*/
+  --btn-width: 6.5rem;
+  --btn-height: 2.125rem;
+
+  /*input*/
+  --input-width: 18.375rem;
+  --input-height: 3.8125rem;
 }
 
+/*Font*/
+.text-title {
+  font-size: var(--font-title);
+}
+
+.text-subtitle {
+  font-size: var(--font-subtitle);
+}
+.text-subtitles {
+  font-size: var(--font-subtitles);
+}
+
+.text-link {
+  font-size: var(--font-link);
+}
+
+.text-paraghraph {
+  font-size: var(--font-paragraph);
+}
+
+/*color*/
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-color {
+  color: var(--color-text);
+}
+
+.icons-color {
+  color: var(--color-text);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+/*Labels*/
+
 .btn {
+  margin: 0.5em;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 1rem;
   background-color: var(--color-primary);
   color: var(--color-text);
   font-size: var(--font-paragraph);
   width: var(--btn-width);
+  height: var(--btn-height);
+  border-radius: var(--radius-spotidados);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-size: var(--font-paragraph);
+  width: 3rem;
   height: var(--btn-height);
   border-radius: var(--radius-spotidados);
   font-weight: 500;
@@ -62,9 +128,24 @@
   border: 1px solid var(--color-hover);
   width: var(--input-width);
   height: var(--input-height);
-  border-radius: var(--radius-luco);
+  border-radius: var(--radius-spotidados);
+  padding: 1rem 1rem;
+  margin: 0.5rem;
+  padding-left: 3rem;
+  font-size: var(--font-paragraph);
+}
+.burguerMenu {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  width: 8rem;
+  height: 3rem;
+  border-radius: var(--radius-spotidados);
   padding: 0 1rem;
   font-size: var(--font-paragraph);
+}
+.burguerMenu:hover {
+  color: var(--color-hover);
+  font-weight: bold;
 }
 
 .icon {
@@ -72,14 +153,19 @@
   height: var(--icon-size);
   color: var(--color-text);
 }
+.iconForm {
+  width: var(--iconForm-size);
+  height: var(--iconForm-size);
+  color: var(--color-icons);
+}
 
 .card {
   background-color: var(--color-surface);
   color: var(--color-text);
   width: var(--card-width);
   height: var(--card-height);
-  padding: 1rem;
-  border-radius: var(--radius-luco);
+  padding: 2rem;
+  border-radius: var(--radius-spotidados);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 

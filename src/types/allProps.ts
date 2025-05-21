@@ -1,14 +1,19 @@
-export interface HeaderProps {
-
+export interface ValidationProps {
+  name: string;
+  surname: string;
+  username: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
 }
 
-export interface LoginProps {
-
-
-}
-
-export interface RegisterProps {
-
+export interface LoginProps  {
+  name: string
+  surname: string
+  username: string
+  email: string
+  password: string
+  confirmPassword: string
 }
 
 export interface UserProps {
@@ -16,11 +21,8 @@ export interface UserProps {
   name: string;
   email: string;
 }
-export interface HomeProps {
-  user: UserProps;
-  onLogout: () => void;
+export interface NavigationProps {
+  backTo?: string;
+  nextTo?: string;
 }
 
-export interface FooterProps {
-
-}

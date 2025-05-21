@@ -1,12 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   History,
-  Homelogin,
+  HomeUser,
   Login,
   Register,
   Home,
-  User,
   SplashingScreen,
+  User,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/homelogin",
-    element: <Homelogin />,
+    path: "/homeUser",
+    element: <HomeUser />,
   },
   {
     path: "/history",
@@ -37,10 +37,6 @@ const router = createBrowserRouter([
   {
     path: "/user",
     element: <User id={""} name={""} email={""} />,
-  },
-  {
-    path: "/history",
-    element: <History />,
   },
 ]);
 
