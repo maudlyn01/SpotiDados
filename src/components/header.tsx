@@ -34,14 +34,14 @@ export const Header = () => {
               {/*<NavLink to="/" className="burguerMenu" onClick={modal}>
             Start
           </NavLink>*/}
-              <NavLink to="/user" className="burguerMenu" onClick={modal}>
+              <NavLink to="/user" className="burguerMenu text-color text-paragraph" onClick={modal}>
                 My Profile
               </NavLink>
-              <NavLink to="/HomeUser" className="burguerMenu" onClick={modal}>
+              <NavLink to="/HomeUser" className="burguerMenu text-color text-paragraph" onClick={modal}>
                 Home
               </NavLink>
               {pathname !== "/home" && (
-                <NavLink to="/home" className="burguerMenu" onClick={modal}>
+                <NavLink to="/home" className="burguerMenu text-color text-paragraph" onClick={modal}>
                   Log Out
                 </NavLink>
               )}

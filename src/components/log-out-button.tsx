@@ -20,7 +20,7 @@ export const LogOut = () => {
     }
 
     return (
-        <button className="btn hover: bg-sky-800" onClick={handleLogout}>
+        <button className="btn hover: bg-sky-800 flex items-end" onClick={handleLogout}>
             Log-out
         </button>
     )
