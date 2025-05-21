@@ -1,10 +1,8 @@
 import { ArrowArcLeft } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 
-export interface NavigationProps {
-    backTo?: string;
-    nextTo?: string;
-}
+import type { NavigationProps } from "../types/allProps";
+
 
 
 export const Navigation = ({backTo, nextTo}: NavigationProps) => {

@@ -6,4 +6,4 @@ import { Register } from "./register";
 import { User } from "./user";
 import { SplashingScreen } from "./splashingScreen";
 
-export { History, Home,HomeUser, Login, Register, User, SplashingScreen };
+export { History, Home, HomeUser, Login, Register, User, SplashingScreen };

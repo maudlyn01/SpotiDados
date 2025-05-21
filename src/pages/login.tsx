@@ -1,72 +1,84 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { EyeSlash, User } from "phosphor-react";
-
-import { GetUsers } from "../data/userdata";
+import { GetUsers, SaveSession } from "../data/userdata";
 import { Navigation } from "../components/buttons";
 
 export const Login = () => {
   //state for user register
+  useEffect(() => {
+    const users = localStorage.getItem("users");
+    if (!users) {
+      const defaultUsers = [
+        {
+          name: "Chilzia",
+          surname: "Macamo",
+          username: "chilzia",
+          email: "chilzia@gmail.com",
+          password: "123456",
+          confirmPassword: "123456",
+        },
+        {
+          name: "Gabriel",
+          surname: "Cuna",
+          username: "gabriel",
+          email: "gabriel@gmail.com",
+          password: "123456",
+          confirmPassword: "123456",
+        },
+      ];
+      localStorage.setItem("users", JSON.stringify(defaultUsers));
+    }
+  }, []);
   const navigate = useNavigate();
-
   const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
-  //state for error
+
   const [errors, setErrors] = useState({
     identifier: "",
     password: "",
     general: "",
   });
-  //state for user pass in all validatio and the router
+
   useEffect(() => {
     const currentUser = localStorage.getItem("currentUser");
     if (currentUser) {
       navigate("/homeUser");
     }
   }, [navigate]);
-
-  //validation for register form, identifer and password error
   const validate = () => {
-    const newErrors = {
-      identifier: "",
-      password: "",
-      general: "",
-    };
+    const newErrors = { identifier: "", password: "", general: "" };
     if (!identifier.trim())
-      newErrors.identifier = "Please enter your email or username";
+      newErrors.identifier = "Please enter email or username";
     if (!password.trim()) newErrors.password = "Password is required";
-
     setErrors(newErrors);
-    return Object.values(newErrors).every((error) => error === "");
+    return Object.values(newErrors).every((err) => err === "");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!validate()) return;
 
     const users = GetUsers();
     const foundUser = users.find(
       (u) =>
-        (u.email === identifier || u.name === identifier) &&
-        u.password === password
+        (u.email === identifier.trim() || u.username === identifier.trim()) &&
+        u.password === password.trim()
     );
-    console.log(foundUser);
 
-    //stage for remember and general error
     if (foundUser) {
+      SaveSession(foundUser);
       if (remember) {
-        localStorage.setItem("currentUser", foundUser.username);
+        localStorage.setItem("rememberedUser", JSON.stringify(foundUser));
       }
       navigate("/homeUser");
     } else {
       setErrors((prev) => ({
         ...prev,
-        general: "Invalid credentials. Please check.",
+        general: "Invalid credentials. Try again.",
       }));
     }
-    console.log(identifier, password);
   };
 
   return (
@@ -77,7 +89,7 @@ export const Login = () => {
         )}
         <img src="/img/Spoti.webp" alt="logo" className="logo m-auto" />
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
-          <section className="">
+          <section>
             <input
               type="text"
               placeholder="E-mail or username"
@@ -86,12 +98,12 @@ export const Login = () => {
               className="input hover:bg-sky-800"
             />
             <User className="iconForm -ml-60 -mt-12 mb-10 " />
+            {errors.identifier && (
+              <span className="text-error text-paragraph">
+                {errors.identifier}
+              </span>
+            )}
           </section>
-          {errors.identifier && (
-            <span className="text-error text-paragraph">
-              {errors.identifier}
-            </span>
-          )}
 
           <section>
             <input
@@ -100,12 +112,14 @@ export const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="input hover:bg-sky-800"
-            />{" "}
+            />
             <EyeSlash className="iconForm ml-66 -mt-12 mb-10" />
+            {errors.password && (
+              <span className="text-error text-paragraph">
+                {errors.password}
+              </span>
+            )}
           </section>
-          {errors.password && (
-            <span className="text-error text-paragraph">{errors.password}</span>
-          )}
 
           <label className="flex items-center text-color gap-2 text-paragraph">
             <input
@@ -113,7 +127,7 @@ export const Login = () => {
               checked={remember}
               onChange={(e) => setRemember(e.target.checked)}
             />
-            Remenber User
+            Remember Me
           </label>
 
           <button type="submit" className="btn hover:bg-sky-800">

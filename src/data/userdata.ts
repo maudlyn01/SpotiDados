@@ -1,4 +1,4 @@
-import type { ValidationProps } from "../types/allProps";
+import type { ValidationProps, LoginProps } from "../types/allProps";
 
 
 export const Users = [
@@ -28,13 +28,39 @@ export const Users = [
   },
 ];
 
-const storageKey = 'users';
-const sessionKey = 'loggedUser';
+export const User: LoginProps[] = [
+  {
+    name: "Chilzia",
+    surname: "Macamo",
+    username: "chilzia",
+    email: "chilzia@gmail.com",
+    password: "123456",
+    confirmPassword: "123456",
+  },
+  {
+    name: "Gabriel",
+    surname: "Cuna",
+    username: "gabriel",
+    email: "gabriel@gmail.com",
+    password: "123456",
+    confirmPassword: "123456",
+  }
+]
 
-export const GetUsers = (): ValidationProps[] => {
+const storageKey = 'users'
+if (!localStorage.getItem(storageKey)) {
+  localStorage.setItem(storageKey, JSON.stringify(User))
+}
+
+export const GetUsers = (): LoginProps[] => {
   const data = localStorage.getItem(storageKey)
   return data ? JSON.parse(data) : []
 }
+
+export const SaveSession = (user: LoginProps) => {
+  localStorage.setItem('currentUser', JSON.stringify(user))
+}
+const sessionKey = 'loggedUser';
 
 export const AddUsers = (user: ValidationProps): boolean => {
   const users = GetUsers()
@@ -47,9 +73,7 @@ export const AddUsers = (user: ValidationProps): boolean => {
   return true
 }
 
-export const SaveSession = (user: ValidationProps): void => {
-  localStorage.setItem(sessionKey, JSON.stringify(user))
-}
+
 
 export const GetSession = (): ValidationProps | null => {
   const session = localStorage.getItem(sessionKey)
