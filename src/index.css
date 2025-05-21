@@ -6,6 +6,7 @@
   --color-hover: #0f6194;
   --color-surface: #000000;
   --color-text: #ffffff;
+  --color-icons: #6c757d;
   --color-error: #d90429;
 
   /*fontes*/
@@ -20,6 +21,9 @@
 
   /*ícones*/
   --icon-size: 2.5rem;
+
+  /*ícones Form*/
+  --iconForm-size: 1.5rem;
 
   /*card e logo*/
   --card-width: 22.5rem;
@@ -63,6 +67,10 @@
 }
 
 .text-color {
+  color: var(--color-text);
+}
+
+.icons-color {
   color: var(--color-text);
 }
 
@@ -121,8 +129,9 @@
   width: var(--input-width);
   height: var(--input-height);
   border-radius: var(--radius-spotidados);
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   margin: 0.5rem;
+  padding-left: 3rem;
   font-size: var(--font-paragraph);
 }
 .burguerMenu {
@@ -143,6 +152,11 @@
   width: var(--icon-size);
   height: var(--icon-size);
   color: var(--color-text);
+}
+.iconForm {
+  width: var(--iconForm-size);
+  height: var(--iconForm-size);
+  color: var(--color-icons);
 }
 
 .card {
