@@ -52,7 +52,7 @@ export const History = () => {
                                 className="w-24 h-24 object-cover rounded"
                             />
                             <span className="text-lg">{artist.name}</span>
-                            <span className="text-gray-400">{artist.music}</span>
+                            <span className="text-gray-400"> - {artist.music}</span>
                         </li>
                     ))}
                 </ol>{" "}

@@ -5,13 +5,21 @@ import { NavLink } from "react-router-dom";
 export const Footer = () => {
    const allArtists = [
     { name: "Neyma", img: "./img/neyma.webp", music: "Arromba" },
-    { name: "Ubaka", img: "./img/ubakka.webp", music: "Wene" },
-    { name: "Lizha James", img: "./img/liza.webp", music: "É Obra" },
+    { name: "UbaKka", img: "./img/ubakka.webp", music: "Cupido" },
+    { name: "Lizha James", img: "./img/liza.webp", music: "És Meu" },
     { name: "Mr Bow", img: "./img/Mr.-Bow-Vou-te-Amar-1.webp", music: "Nr. 1" },
-    { name: "Luan", img: "./img/luan.webp", music: "Eu Volto" },
-    { name: "Nicky Minaj", img: "./img/NICK.webp", music: "Party" },
+    { name: "Luan", img: "./img/luan.webp", music: "Escreve aí" },
+    { name: "Nicki Minaj", img: "./img/NICK.webp", music: "Tusa" },
     { name: "Michel Jackson", img: "./img/capaMichel.webp", music: "Thriller" },
     { name: "Rihanna", img: "./img/capa_rihanna.webp", music: "Diamonds" },
+    { name: "Neyma", img: "./img/neyma.webp", music: "tsatsa" },
+    { name: "UbaKka", img: "./img/ubakka.webp", music: "Wene" },
+    { name: "Lizha James", img: "./img/liza.webp", music: "Leva Boy" },
+    { name: "Mr Bow", img: "./img/Mr.-Bow-Vou-te-Amar-1.webp", music: "Muleza" },
+    { name: "Luan Santana", img: "./img/luan.webp", music: "Trem Bala" },
+    { name: "Nicky Minaj", img: "./img/NICK.webp", music: "Barbie World" },
+    { name: "Michel Jackson", img: "./img/capaMichel.webp", music: "Bad" },
+    { name: "Rihanna", img: "./img/capa_rihanna.webp", music: "Stay" },  
   ];
   const [modalLibrary, setModalLibraryOpen] = useState(false);
   const [modalSearcher, setModalSearcherOpen] = useState(false);
@@ -19,6 +27,7 @@ export const Footer = () => {
 
   const toggleLibrary = () => setModalLibraryOpen(!modalLibrary);
   const toggleSearcher = () => {setModalSearcherOpen(!modalSearcher);
+  setModalLibraryOpen(true);
   setSearchTerm("");
   }
   const filterArtist=allArtists.filter((artist)=>
@@ -28,7 +37,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className=" h-16 w-full bg-black text-sm text-white fixed bottom-0 left-10 ri z-50">
+      <footer className=" h-16 w-full bg-black text-sm text-white fixed bottom-0 left-8 z-50">
         <nav className="flex justify-between items-center h-full">
           <button
             onClick={toggleLibrary}
