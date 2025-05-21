@@ -27,7 +27,7 @@ export const Register = () => {
     confirmPassword: '',
   })
 
-  const handleChenge = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlechange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
     console.log(formData)
@@ -112,7 +112,7 @@ export const Register = () => {
             name="name"
             placeholder="Name"
             value={formData.name}
-          onChange={handleChenge}
+          onChange={handlechange}
           className="input hover:bg-sky-800"
         />
         {errors.name && <p className="text-error text-paragraph">{errors.name}</p>}
@@ -122,7 +122,7 @@ export const Register = () => {
           name="surname"
           placeholder="Surname"
           value={formData.surname}
-          onChange={handleChenge}
+          onChange={handlechange}
           className="input w-full hover:bg-sky-800"
           />
           {errors.surname && <p className="text-error text-paragraph">{errors.surname}</p>}
@@ -131,7 +131,7 @@ export const Register = () => {
             name="username"
             placeholder="Username"
             value={formData.username}
-            onChange={handleChenge}
+            onChange={handlechange}
             className="input hover:bg-sky-800" 
           />
           {errors.username && <p className="text-error text-paragraph">{errors.username}</p>}
@@ -141,7 +141,7 @@ export const Register = () => {
             name="email"
             placeholder="E-mail"
             value={formData.email}
-            onChange={handleChenge}
+            onChange={handlechange}
             className="input hover:bg-sky-800"
           />
           {errors.email && <p className="text-error text-paragraph">{errors.email}</p>}
@@ -151,7 +151,7 @@ export const Register = () => {
             name="password"
             placeholder="Password"
             value={formData.password}
-            onChange={handleChenge}
+            onChange={handlechange}
             className="input hover:bg-sky-800"
           />
           {errors.password && <p className="text-error text-paragraph">{errors.password}</p>}
@@ -161,7 +161,7 @@ export const Register = () => {
             name="confirmPassword"
             placeholder="Confirm Password"
             value={formData.confirmPassword}
-            onChange={handleChenge}
+            onChange={handlechange}
             className="input hover:bg-sky-800"
           />
           {errors.confirmPassword && <p className="text-error text-paragraph">{errors.confirmPassword}</p>}

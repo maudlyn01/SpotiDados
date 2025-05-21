@@ -87,7 +87,7 @@ export const Login = () => {
         {errors.general && (
           <span className="text-error text-paragraph">{errors.general}</span>
         )}
-        <img src="/img/Spoti.webp" alt="logo" className="logo m-auto" />
+        <img src="/img/Spoti.png" alt="logo" className="logo m-auto" />
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
           <section>
             <input

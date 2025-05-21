@@ -80,9 +80,9 @@ export const HomeUser = () => {
 
   return (
     <>
-      <div className="bg-black min-h-screen  ">
+      <div className="bg-surface min-h-screen  p-4">
         <Header />
-        <main className="pb-20">
+        <main className="">
           <h5 className="text-link font-bold text-color">Welcome, {user.name || user.username}</h5>
           <LogOut />
           <section>
