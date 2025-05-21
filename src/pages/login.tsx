@@ -104,6 +104,7 @@ export const Login = () => {
         {errors.password && (
             <span className="text-error text-paragraph">{errors.password}</span>
           )}
+          
 
         <label className="flex items-center text-color gap-2 text-paragraph">
           <input
