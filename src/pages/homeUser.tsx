@@ -3,11 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { User } from "phosphor-react";
 import { ArrowRight, ArrowLeft } from "phosphor-react";
 
-
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import { Users } from "../data/userdata";
-
 
 import img from "/img/fingir.webp";
 import img1 from "/img/iveth.webp";
@@ -27,12 +25,12 @@ export const HomeUser = () => {
   const image = [img, img1, img3, img2, img4, img5];
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % image.length);
   };
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + image.length) % images.length
     );
   };
   //section international
@@ -60,18 +58,16 @@ export const HomeUser = () => {
       <User className="icon" /> <b>{person.name}</b>
     </li>
   ));
-  
+
   //a status to list the user after registration
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('currentUser')
+    const storedUser = localStorage.getItem("currentUser");
     if (storedUser) {
-      setUsername(JSON.parse(storedUser))
+      setUsername(JSON.parse(storedUser));
     }
-  }, [])
-
-  
+  }, []);
 
   return (
     <>
@@ -79,7 +75,9 @@ export const HomeUser = () => {
         <Header />
         <LogOut />
         <main className="pb-20">
-          <h4 className="text-subtitle font-bold text-color">Welcome, {username}</h4>
+          <h4 className="text-subtitle font-bold text-color">
+            Welcome, {username}
+          </h4>
           <section>
             <p className="text-color  font-bold"> International Artists</p>
             <div className="card">
@@ -89,7 +87,6 @@ export const HomeUser = () => {
                 alt={`Imagem ${currentsIndex + 1}`}
               />
             </div>
-
 
             <div className="flex justify-between">
               <button onClick={prevSlides}>

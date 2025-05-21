@@ -2,9 +2,7 @@ import { ArrowRight, ArrowLeft } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-
 import { Header } from "../components/header";
-
 
 import img from "/img/fingir.webp";
 import img1 from "/img/iveth.webp";
@@ -29,12 +27,12 @@ export const Home = () => {
   const image = [img, img1, img2, img3, img4, img5, img6, img7, img8];
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % image.length);
   };
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + image.length) % image.length
     );
   };
   //section international
@@ -49,12 +47,12 @@ export const Home = () => {
   ];
 
   const nextSlides = () => {
-    setCurrentsIndex((prevsIndex) => (prevsIndex + 1) % image.length);
+    setCurrentsIndex((prevsIndex) => (prevsIndex + 1) % images.length);
   };
 
   const prevSlides = () => {
     setCurrentsIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % image.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
   return (
@@ -92,7 +90,7 @@ export const Home = () => {
         <br />
         <h4 className="text-white "> International Artists</h4>
         <section className="card">
-          <div >
+          <div>
             <img
               className="mx-auto"
               src={images[currentsIndex]}
@@ -101,17 +99,15 @@ export const Home = () => {
           </div>
         </section>
 
-          <div className="flex justify-between">
-            <button onClick={prevSlides}>
-              <ArrowLeft className="btnNav" />
-            </button>
-            <button onClick={nextSlides}>
-              <ArrowRight className="btnNav" />
-            </button>
-          </div>
+        <div className="flex justify-between">
+          <button onClick={prevSlides}>
+            <ArrowLeft className="btnNav" />
+          </button>
+          <button onClick={nextSlides}>
+            <ArrowRight className="btnNav" />
+          </button>
+        </div>
       </main>
-
     </div>
-  
   );
 };
