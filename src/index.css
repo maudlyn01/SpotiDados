@@ -6,11 +6,12 @@
   --color-hover: #0f6194;
   --color-surface: #000000;
   --color-text: #ffffff;
-  --color-error: #D90429;
+  --color-error: #d90429;
 
   /*fontes*/
   --font-title: 3rem;
   --font-subtitle: 2.5rem;
+  --font-subtitles: 2rem;
   --font-link: 1.5rem;
   --font-paragraph: 1rem;
 
@@ -43,6 +44,9 @@
 .text-subtitle {
   font-size: var(--font-subtitle);
 }
+.text-subtitles {
+  font-size: var(--font-subtitles);
+}
 
 .text-link {
   font-size: var(--font-link);
@@ -69,7 +73,6 @@
 .text-error {
   color: var(--color-error);
 }
-
 
 /*Labels*/
 

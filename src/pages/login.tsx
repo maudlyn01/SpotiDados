@@ -111,7 +111,7 @@ export const Login = () => {
             checked={remember}
             onChange={(e) => setRemember(e.target.checked)}
           />
-          Remenber usuary
+          Remenber User
         </label>
 
         

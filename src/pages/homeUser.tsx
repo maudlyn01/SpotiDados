@@ -16,7 +16,7 @@ import img5 from "/img/Mr.-Bow-Vou-te-Amar-1.webp";
 import imgInter1 from "/img/NICK.webp";
 import imgInter2 from "/img/luan.webp";
 import imgInter4 from "/img/capa_rihanna.webp";
-import { LogOut } from "../components/log-out-button";
+//import { LogOut } from "../components/log-out-button";
 
 export const HomeUser = () => {
   //section national
@@ -30,7 +30,7 @@ export const HomeUser = () => {
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + image.length) % images.length
+      (prevIndex) => (prevIndex - 1 + image.length) % image.length
     );
   };
   //section international
@@ -73,13 +73,15 @@ export const HomeUser = () => {
     <>
       <div className="bg-black min-h-screen  ">
         <Header />
-        <LogOut />
         <main className="pb-20">
           <h4 className="text-subtitle font-bold text-color">
             Welcome, {username}
           </h4>
           <section>
-            <p className="text-color  font-bold"> International Artists</p>
+            <h4 className="text-subtitles text-color">
+              {" "}
+              International Artists
+            </h4>
             <div className="card">
               <img
                 className="mx-auto"
@@ -98,7 +100,7 @@ export const HomeUser = () => {
             </div>
           </section>
           <section className="m-5 ">
-            <p className="text-color font-bold"> National artists</p>
+            <h4 className="text-subtitles text-color"> National artists</h4>
             <div className="card">
               <img
                 className="mx-auto"
@@ -116,7 +118,7 @@ export const HomeUser = () => {
             </div>
           </section>
           <div className="mx-1">
-            <p className="text-color m-2 font-bold "> Users</p>
+            <h4 className="text-subtitles text-color"> Users</h4>
             <section className="card">
               <ul>{listeUsers}</ul>
             </section>

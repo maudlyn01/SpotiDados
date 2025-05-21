@@ -2,8 +2,6 @@ import { ArrowRight, ArrowLeft } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import { Header } from "../components/header";
-
 import img from "/img/fingir.webp";
 import img1 from "/img/iveth.webp";
 import img2 from "/img/liza.webp";
@@ -57,9 +55,19 @@ export const Home = () => {
   };
   return (
     <div className="bg-surface min-h-screen p-5 items-center grid grid-cols-1">
-      <Header />
+      <header className="w-full px-4 py-2 mx-auto bg-surface text-sm text-color shadow-md mb-0 ">
+        <div className="flex justify-between items-center">
+          <img
+            src="/img/Spoti.webp"
+            alt=""
+            className="w-20 h-20 object-contain"
+          />
+          <h4 className="text-subtitles font-bold text-color">
+            Welcome, Visitor
+          </h4>
+        </div>
+      </header>
       <main className=" flex-1">
-        <h4 className="text-subtitle font-bold text-color">Welcome, Visitor</h4>
         <div className="flex justify-end">
           <button className="btn" onClick={() => navigate("/login")}>
             Login
@@ -69,7 +77,7 @@ export const Home = () => {
           </button>
         </div>
         <br />
-        <h4 className="text-white">National Artists</h4>
+        <h4 className="text-subtitles text-color">National Artists</h4>
         <section className="card">
           <div>
             <img
@@ -88,7 +96,7 @@ export const Home = () => {
           </button>
         </div>
         <br />
-        <h4 className="text-white "> International Artists</h4>
+        <h4 className="text-subtitles text-color"> International Artists</h4>
         <section className="card">
           <div>
             <img
