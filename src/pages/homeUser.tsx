@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { User } from "phosphor-react";
 import { ArrowRight, ArrowLeft } from "phosphor-react";
 
+
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import { Users } from "../data/userdata";
 import { LogOut } from "../components/log-out-button";
+
 
 import img from "/img/fingir.webp";
 import img1 from "/img/iveth.webp";
@@ -26,12 +28,12 @@ export const HomeUser = () => {
   const image = [img, img1, img3, img2, img4, img5];
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % image.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + image.length) % image.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
   //section international
@@ -59,49 +61,32 @@ export const HomeUser = () => {
       <User className="icon" /> <b>{person.name}</b>
     </li>
   ));
-
+  
   //a status to list the user after registration
-
-  const [username, setUsername] = useState("");
-
-  useEffect(() => {
-    const storedUser = localStorage.getItem("currentUser");
-    if (storedUser) {
-      setUsername(JSON.parse(storedUser));
-    }
-  }, []);
-
   const navigate = useNavigate();
-  const [user, setUser] = useState<{ name?: string; username?: string }>({});
+  const [user, setUser] = useState<{ name?: string, username?: string }>({});
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("currentUser");
+    const storedUser = localStorage.getItem('currentUser');
     if (!storedUser) {
-      navigate("/homeUser");
+
+      navigate('/homeUser');
     } else {
       setUser(JSON.parse(storedUser));
     }
   }, [navigate]);
+
+  
 
   return (
     <>
       <div className="bg-black min-h-screen  ">
         <Header />
         <main className="pb-20">
-          <h4 className="text-subtitle font-bold text-color">
-            Welcome, {username}
-          </h4>
-
-          <h5 className="text-link font-bold text-color">
-            Welcome, {user.name || user.username}
-          </h5>
+          <h5 className="text-link font-bold text-color">Welcome, {user.name || user.username}</h5>
           <LogOut />
-
           <section>
-            <h4 className="text-subtitles text-color">
-              {" "}
-              International Artists
-            </h4>
+            <p className="text-color  font-bold"> International Artists</p>
             <div className="card">
               <img
                 className="mx-auto"
@@ -109,6 +94,7 @@ export const HomeUser = () => {
                 alt={`Imagem ${currentsIndex + 1}`}
               />
             </div>
+
 
             <div className="flex justify-between">
               <button onClick={prevSlides}>
@@ -120,7 +106,7 @@ export const HomeUser = () => {
             </div>
           </section>
           <section className="m-5 ">
-            <h4 className="text-subtitles text-color"> National artists</h4>
+            <p className="text-color font-bold"> National artists</p>
             <div className="card">
               <img
                 className="mx-auto"
@@ -138,7 +124,7 @@ export const HomeUser = () => {
             </div>
           </section>
           <div className="mx-1">
-            <h4 className="text-subtitles text-color"> Users</h4>
+            <p className="text-color m-2 font-bold "> Users</p>
             <section className="card">
               <ul>{listeUsers}</ul>
             </section>

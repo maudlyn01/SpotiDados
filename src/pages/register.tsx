@@ -80,9 +80,8 @@ export const Register = () => {
     const hasError = Object.values(newErrors).some((error) => error !== '')
     if (hasError)return;
 
-    localStorage.setItem("currentUser", 
-    JSON.stringify(formData.username));
-    navigate("/homeUser");
+
+    navigate("/login");
   	return
   }
 
