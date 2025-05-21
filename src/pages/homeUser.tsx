@@ -7,6 +7,7 @@ import { ArrowRight, ArrowLeft } from "phosphor-react";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import { Users } from "../data/userdata";
+import { LogOut } from "../components/log-out-button";
 
 
 import img from "/img/fingir.webp";
@@ -18,7 +19,7 @@ import img5 from "/img/Mr.-Bow-Vou-te-Amar-1.webp";
 import imgInter1 from "/img/NICK.webp";
 import imgInter2 from "/img/luan.webp";
 import imgInter4 from "/img/capa_rihanna.webp";
-import { LogOut } from "../components/log-out-button";
+//import { LogOut } from "../components/log-out-button";
 
 export const HomeUser = () => {
   //section national

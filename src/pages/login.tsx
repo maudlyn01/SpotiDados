@@ -103,6 +103,7 @@ export const Login = () => {
             )}
           </section>
 
+
           <section>
             <input
               type="password"
@@ -115,6 +116,7 @@ export const Login = () => {
               <span className="text-error text-paragraph">{errors.password}</span>
             )}
           </section>
+
 
           <label className="flex items-center text-color gap-2 text-paragraph">
             <input
