@@ -1,4 +1,4 @@
-import { ArrowArcLeft } from "@phosphor-icons/react";
+import { ArrowArcLeft } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 
 export interface NavigationProps {
@@ -11,7 +11,7 @@ export const Navigation = ({backTo, nextTo}: NavigationProps) => {
     const navigate = useNavigate();
 
     return (
-        <div className="flex justify-between mt-6">
+        <div className="flex justify-between fixed bottom-4 left-0 right-0">
             {backTo &&(
                 <button onClick={() => navigate(backTo)} className="burguerMenu">
                     <ArrowArcLeft size={20} />

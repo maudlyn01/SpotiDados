@@ -16,7 +16,7 @@ export const SplashingScreen = () => {
     <>
       <div className="flex items-center justify-center h-screen bg-black">
         <div className="flex flex-col items-center">
-          <img src="/img/Spoti.png" alt="" className="logo animate-pulse m-auto " />
+          <img src="/img/Spoti.web" alt="" className="logo animate-pulse m-auto " />
         </div>
       </div>
     </>

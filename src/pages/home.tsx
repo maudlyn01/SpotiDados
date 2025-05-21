@@ -58,9 +58,10 @@ export const Home = () => {
     );
   };
   return (
-    <div className="bg-black min-h-screen p-5 items-center grid grid-cols-1">
+    <div className="bg-surface min-h-screen p-5 items-center grid grid-cols-1">
       <Header />
       <main className=" flex-1">
+        <h4 className="text-subtitle font-bold text-color">Welcome, Visitor</h4>
         <div className="flex justify-end">
           <button className="btn" onClick={() => navigate("/login")}>
             Login

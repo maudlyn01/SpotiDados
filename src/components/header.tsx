@@ -10,13 +10,13 @@ export const Header = () => {
 
 
     
-    <header className="w-full px-4 py-2 bg-black text-sm text-white shadow-md mb-0 ">
+    <header className="w-full px-4 py-2 bg-surface text-sm text-color shadow-md mb-0 ">
       <div className="flex justify-between items-center">
-        <img src="/img/Spoti.png" alt="" className="w-20 h-20 object-contain" />
+        <img src="/img/Spoti.webp" alt="" className="w-20 h-20 object-contain" />
 
         <button
           onClick={modal}
-          className="md:hidden text-white"
+          className="md:hidden text-color"
           aria-label="Toggle menu"
         >
           {modalOpen ? <X size={28} /> : <List size={28} />}

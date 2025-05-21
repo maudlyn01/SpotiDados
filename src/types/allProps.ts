@@ -3,8 +3,8 @@ export type ValidationProps= {
   surname: string;
   username: string;
   email: string;
-  password: string | number;
-  confirmPassword: string | number;
+  password: string;
+  confirmPassword: string;
 }
 
 export type UserProps= {

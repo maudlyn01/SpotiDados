@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { User } from "phosphor-react";
 import { ArrowRight, ArrowLeft } from "phosphor-react";
+
+
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import { Users } from "../data/userdata";
+
+
 import img from "/img/fingir.webp";
 import img1 from "/img/iveth.webp";
 import img2 from "/img/liza.webp";
@@ -14,6 +18,7 @@ import img5 from "/img/Mr.-Bow-Vou-te-Amar-1.webp";
 import imgInter1 from "/img/NICK.webp";
 import imgInter2 from "/img/luan.webp";
 import imgInter4 from "/img/capa_rihanna.webp";
+import { LogOut } from "../components/log-out-button";
 
 export const HomeUser = () => {
   //section national
@@ -50,19 +55,33 @@ export const HomeUser = () => {
     <li
       key={person.id}
       onClick={() => navigate("/history", { state: { user: person } })}
-      className="flex flex-row cursor-pointer hover:text-blue-400 text-color"
+      className="flex flex-row cursor-pointer hover:text-sky-800 text-color"
     >
       <User className="icon" /> <b>{person.name}</b>
     </li>
   ));
+  
+  //a status to list the user after registration
+  const [username, setUsername] = useState('');
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('currentUser')
+    if (storedUser) {
+      setUsername(JSON.parse(storedUser))
+    }
+  }, [])
+
+  
 
   return (
     <>
       <div className="bg-black min-h-screen  ">
         <Header />
+        <LogOut />
         <main className="pb-20">
+          <h4 className="text-subtitle font-bold text-color">Welcome, {username}</h4>
           <section>
-            <p className="text-white  font-bold"> International Artists</p>
+            <p className="text-color  font-bold"> International Artists</p>
             <div className="card">
               <img
                 className="mx-auto"
@@ -82,7 +101,7 @@ export const HomeUser = () => {
             </div>
           </section>
           <section className="m-5 ">
-            <p className="text-white font-bold"> National artists</p>
+            <p className="text-color font-bold"> National artists</p>
             <div className="card">
               <img
                 className="mx-auto"

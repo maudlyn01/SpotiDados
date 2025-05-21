@@ -6,6 +6,7 @@
   --color-hover: #0f6194;
   --color-surface: #000000;
   --color-text: #ffffff;
+  --color-error: #D90429;
 
   /*fontes*/
   --font-title: 3rem;
@@ -65,6 +66,11 @@
   background-color: var(--color-surface);
 }
 
+.text-error {
+  color: var(--color-error);
+}
+
+
 /*Labels*/
 
 .btn {
@@ -113,6 +119,7 @@
   height: var(--input-height);
   border-radius: var(--radius-spotidados);
   padding: 0 1rem;
+  margin: 0.5rem;
   font-size: var(--font-paragraph);
 }
 .burguerMenu {
