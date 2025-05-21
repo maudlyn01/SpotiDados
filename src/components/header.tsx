@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { List, X } from "phosphor-react";
-import { GetSession } from "../data/userdata";
+//import { GetSession } from "../data/userdata";
 
 
 export const Header = () => {
@@ -9,7 +9,7 @@ export const Header = () => {
   const { pathname } = useLocation();
   const modal = () => setModalOpen(!modalOpen);
 
-  const userSession = GetSession();
+  //const userSession = GetSession();
 
   return (
     
@@ -29,7 +29,7 @@ export const Header = () => {
       {modalOpen && (
 
         <nav className="flex flex-col items-center space-y-3 mt-4 md:hidden text-center">
-          {userSession && (
+          
             <>
               {/*<NavLink to="/" className="burguerMenu" onClick={modal}>
             Start
@@ -46,7 +46,7 @@ export const Header = () => {
                 </NavLink>
               )}
             </>
-          )}
+          
         </nav>
       )}
     </header>
