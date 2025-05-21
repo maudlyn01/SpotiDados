@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { List, X } from "phosphor-react";
+import { GetSession } from "../data/userdata";
 
-const isLoggedIn = true;
 
 export const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const { pathname } = useLocation();
   const modal = () => setModalOpen(!modalOpen);
+
+  const userSession = GetSession();
 
   return (
 
@@ -28,21 +30,24 @@ export const Header = () => {
       {modalOpen && (
 
         <nav className="flex flex-col items-center space-y-3 mt-4 md:hidden text-center">
-          {/*<NavLink to="/" className="burguerMenu" onClick={modal}>
+          {userSession && (
+            <>
+              {/*<NavLink to="/" className="burguerMenu" onClick={modal}>
             Start
           </NavLink>*/}
-          <NavLink to="/user" className="burguerMenu" onClick={modal}>
-            My Profile
-          </NavLink>
-          <NavLink to="/HomeUser" className="burguerMenu" onClick={modal}>
-            Home
-          </NavLink>
-           {isLoggedIn && pathname !== "/home" && (
-          <NavLink to="/home" className="burguerMenu" onClick={modal}>
-            Log Out
-          </NavLink>
-           )}
-
+              <NavLink to="/user" className="burguerMenu" onClick={modal}>
+                My Profile
+              </NavLink>
+              <NavLink to="/HomeUser" className="burguerMenu" onClick={modal}>
+                Home
+              </NavLink>
+              {pathname !== "/home" && (
+                <NavLink to="/home" className="burguerMenu" onClick={modal}>
+                  Log Out
+                </NavLink>
+              )}
+            </>
+          )}
         </nav>
       )}
     </header>
