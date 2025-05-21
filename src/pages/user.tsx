@@ -1,6 +1,6 @@
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-import { type UserProps } from "../types/allProps";
+import type {  UserProps } from "../types/allProps";
 
 export const User = ({ id, name, email }: UserProps) => {
   return (

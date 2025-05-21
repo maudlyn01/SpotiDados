@@ -50,11 +50,11 @@ export const HomeUser = () => {
   };
 
   //list user
-  const navigate = useNavigate();
+  const navigation = useNavigate();
   const listeUsers = Users.map((person) => (
     <li
       key={person.id}
-      onClick={() => navigate("/history", { state: { user: person } })}
+      onClick={() => navigation("/history", { state: { user: person } })}
       className="flex flex-row cursor-pointer hover:text-sky-800 text-color"
     >
       <User className="icon" /> <b>{person.name}</b>
@@ -62,14 +62,18 @@ export const HomeUser = () => {
   ));
   
   //a status to list the user after registration
-  const [username, setUsername] = useState('');
+  const navigate = useNavigate();
+  const [user, setUser] = useState<{ name?: string, username?: string }>({});
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('currentUser')
-    if (storedUser) {
-      setUsername(JSON.parse(storedUser))
+    const storedUser = localStorage.getItem('currentUser');
+    if (!storedUser) {
+
+      navigate('/homeUser');
+    } else {
+      setUser(JSON.parse(storedUser));
     }
-  }, [])
+  }, [navigate]);
 
   
 
@@ -78,7 +82,8 @@ export const HomeUser = () => {
       <div className="bg-black min-h-screen  ">
         <Header />
         <main className="pb-20">
-          <h4 className="text-subtitle font-bold text-color">Welcome, {username}</h4>
+          <h5 className="text-link font-bold text-color">Welcome, {user.name || user.username}</h5>
+          <LogOut />
           <section>
             <p className="text-color  font-bold"> International Artists</p>
             <div className="card">

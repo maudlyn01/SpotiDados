@@ -1,4 +1,4 @@
-export type ValidationProps= {
+export interface ValidationProps {
   name: string;
   surname: string;
   username: string;
@@ -7,7 +7,16 @@ export type ValidationProps= {
   confirmPassword: string;
 }
 
-export type UserProps= {
+export interface LoginProps  {
+  name: string
+  surname: string
+  username: string
+  email: string
+  password: string
+  confirmPassword: string
+}
+
+export interface UserProps {
   id: string;
   name: string;
   email: string;
