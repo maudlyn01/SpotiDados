@@ -12,9 +12,6 @@ export const Header = () => {
   const userSession = GetSession();
 
   return (
-
-
-
     
     <header className="w-full px-4 py-2 bg-surface text-sm text-color shadow-md mb-0 ">
 

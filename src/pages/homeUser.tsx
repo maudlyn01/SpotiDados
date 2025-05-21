@@ -77,7 +77,6 @@ export const HomeUser = () => {
     <>
       <div className="bg-black min-h-screen  ">
         <Header />
-        <LogOut />
         <main className="pb-20">
           <h4 className="text-subtitle font-bold text-color">Welcome, {username}</h4>
           <section>
